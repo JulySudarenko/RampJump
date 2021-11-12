@@ -1,12 +1,13 @@
-﻿using Code.Controllers;
+﻿using Code.Configs;
+using Code.Factory;
 using Code.UserInput;
 using UnityEngine;
 
-namespace RampJump
+namespace Code.Controllers
 {
     public class RootController : MonoBehaviour
     {
-        [Header("Configs")]
+        //[SerializeField] private Data _data;
         [SerializeField] private GameObject _ball;
         [SerializeField] private GameObject _glass;
         [SerializeField] private GameObject _arrow;
@@ -14,27 +15,25 @@ namespace RampJump
         [SerializeField] private GameObject _startPlace;
 
         [SerializeField] private Transform _ballStartPosition;
-
-        private BallTouchHandlingController _ballTouchHandlingController;
-        private GlassTouchHandling _glassTouchHandling;
-        private ITouchInput _touchInput;
+        [SerializeField] private Transform _glassStartPosition;
         
         private Controllers _controllers;
         
         private void Start()
         {
+            //var configParser = new ConfigParser(_data);
             Camera camera = Camera.main;
             
-            ITouchInput input = new TouchInputHandling();
+            IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
             
-            _ballTouchHandlingController = new BallTouchHandlingController(_ball, _ballStartPosition, _startPlace, camera, input);
-            //_glassTouchHandling = new GlassTouchHandling(_glass);
-
+            var ballTouchHandlingController = new BallTouchHandlingController(_ball, _ballStartPosition, _startPlace, camera, input);
+            var glassTouchHandlingController = new GlassTouchHandlingController(_glass, _glassStartPosition, camera, input);
             
             _controllers = new Controllers();
             _controllers.Add(inputController);
-            _controllers.Add(_ballTouchHandlingController);
+            _controllers.Add(ballTouchHandlingController);
+            _controllers.Add(glassTouchHandlingController);
             _controllers.Initialize();
         }
 

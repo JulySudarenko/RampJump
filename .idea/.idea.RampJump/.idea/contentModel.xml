@@ -6,24 +6,42 @@
     <e p="D:\geekbrains.ru\Projects\Unity\RampJump" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
+          <e p="Assistant" t="Include">
+            <e p="ActiveObjectsName.cs" t="Include" />
+            <e p="Extentions.cs" t="Include" />
+          </e>
+          <e p="Configs" t="Include">
+            <e p="ActiveObjectsData.cs" t="Include" />
+            <e p="Data.cs" t="Include" />
+            <e p="LevelObjectConfig.cs" t="Include" />
+          </e>
           <e p="Controllers" t="Include">
             <e p="BallTouchHandlingController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
-            <e p="GlassTouchHandling.cs" t="Include" />
+            <e p="GlassTouchHandlingController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
+            <e p="RootController.cs" t="Include" />
+          </e>
+          <e p="Factory" t="Include">
+            <e p="ConfigParser.cs" t="Include" />
+            <e p="Factory.cs" t="Include" />
+            <e p="IFactory.cs" t="Include" />
+            <e p="ObjectInitialization.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
+            <e p="IActiveObject.cs" t="Include" />
             <e p="ICleanup.cs" t="Include" />
             <e p="IController.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
             <e p="IFixedExecute.cs" t="Include" />
             <e p="IInitialize.cs" t="Include" />
+            <e p="ILevelObjects.cs" t="Include" />
+            <e p="IStartPositions.cs" t="Include" />
           </e>
           <e p="RampJump.asmdef" t="Include" />
-          <e p="RootController.cs" t="Include" />
           <e p="UserInput" t="Include">
-            <e p="ITouchInput.cs" t="Include" />
-            <e p="TouchInputHandling.cs" t="Include" />
+            <e p="IUserInput.cs" t="Include" />
+            <e p="UserInputHandling.cs" t="Include" />
           </e>
         </e>
       </e>

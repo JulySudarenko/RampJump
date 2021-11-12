@@ -20,12 +20,33 @@
         <option value="$PROJECT_DIR$/Assets/Code/BallTouchHandling.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/TouchInputHandling.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Root.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UserInput/ITouchInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UserInput/TouchInputHandling.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/GlassTouchHandling.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/RootController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UserInput/IUserInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UserInput/UserInputHandling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ICleanup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/GlassTouchHandlingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IExecute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IStartPositions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInitialize.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ILevelObjects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Assistant/Extentions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ISpeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Assistant/NameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectsData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IActiveObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Factory/ActiveObjectInitialization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Factory/ObjectInitialization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Factory/ConfigParser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
       </list>
     </option>
   </component>
@@ -142,28 +163,9 @@
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1493" height="279" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1636526669374" />
-    <state x="2496" y="-40" key="RiderGenerateDialog" timestamp="1636694424557">
+    <state x="2496" y="-40" key="RiderGenerateDialog" timestamp="1636719577845">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state x="2496" y="-40" key="RiderGenerateDialog/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1636694424557" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs</url>
-          <line>72</line>
-          <properties documentPath="D:\geekbrains.ru\Projects\Unity\RampJump\Assets\Code\Controllers\Controllers.cs" initialLine="72">
-            <startOffsets>
-              <option value="2248" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2285" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="2496" y="-40" key="RiderGenerateDialog/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1636719577845" />
   </component>
 </project>

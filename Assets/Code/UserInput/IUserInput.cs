@@ -1,15 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-namespace RampJump
+namespace Code.UserInput
 {
-    public interface ITouchInput
+    public interface IUserInput
     {
         event Action<bool> OnTouchDown;
         event Action<bool> OnTouchUp;
-        event Action<Vector2> OnTouch;
-        
+        event Action<bool> OnTouch;
+        event Action<Vector3> OnChangeMousePosition;
+
         void GetTouchDown();
         void GetTouchUp();
+        void GetTouch();
     }
 }

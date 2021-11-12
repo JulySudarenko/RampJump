@@ -1,4 +1,4 @@
-﻿namespace Code.UserInput
+﻿namespace Code.Interfaces
 {
     internal interface IController
     {

@@ -1,61 +1,76 @@
-﻿using Code.UserInput;
+﻿using Code.Interfaces;
+using Code.UserInput;
 using UnityEngine;
 
-namespace RampJump
+namespace Code.Controllers
 {
-    public class BallTouchHandlingController : IFixedExecute
+    public class BallTouchHandlingController : IInitialize, IFixedExecute, ICleanup
     {
-        private GameObject _ball;
-        private GameObject _startPlace;
-        private Transform _startPosition;
-        private Camera _camera;
-        private float _force = 500.0f;
-        
-        private Rigidbody _ballRigidbody;
-        private int _ballID;
+        private readonly GameObject _ball;
+        private readonly GameObject _startPlace;
+        private readonly IUserInput _userInput;
+        private readonly Transform _startPosition;
+        private readonly Camera _camera;
+        private readonly float _force = 500.0f;
+        private readonly Rigidbody _ballRigidbody;
+        private readonly int _ballID;
         private Ray _ray;
         private RaycastHit _hit;
         private Vector3 _touchStartPosition;
         private Vector3 _touchDirection;
+        private Vector3 _mousePosition;
         private bool _isBallTouched;
+        private bool _isMouseButtonDown;
+        private bool _isMouseButtonUp;
 
-        public BallTouchHandlingController(GameObject ball, Transform startPosition, GameObject startPlace, Camera camera, ITouchInput touchInput)
+        public BallTouchHandlingController(GameObject ball, Transform startPosition, GameObject startPlace,
+            Camera camera, IUserInput userInput)
         {
             _ball = ball;
             _startPlace = startPlace;
             _startPosition = startPosition;
             _camera = camera;
-            
-            _ballRigidbody = ball.GetComponentInChildren<Rigidbody>();
-            _ballID = _ball.GetComponentInChildren<SphereCollider>().gameObject.GetInstanceID();
-            _ball.transform.position = _startPosition.position;
-            
-            _isBallTouched = false;
+             _userInput = userInput;
+             _ballRigidbody = _ball.GetComponentInChildren<Rigidbody>();
+             _ballID = _ball.GetComponentInChildren<SphereCollider>().gameObject.GetInstanceID();
         }
 
+        public void Initialize()
+        {
+            _ball.transform.position = _startPosition.position;
+            _isBallTouched = false;
+            _userInput.OnTouchDown += OnMouseButtonDown;
+            _userInput.OnTouchUp += OnMouseButtonUp;
+            _userInput.OnChangeMousePosition += GetMousePosition;
+        }
+        
+        private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;
+        private void OnMouseButtonUp(bool value) => _isMouseButtonUp = value;
+        private void GetMousePosition(Vector3 position) => _mousePosition = position;
+        
         public void FixedExecute(float deltaTime)
         {
-            if (Input.GetMouseButton(0))
+            if (_isMouseButtonDown)
             {
-                GetDirection();
+                CheckTouch();
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (_isMouseButtonUp)
             {
                 KickTheBall();
             }
         }
 
-        private void GetDirection()
+        private void CheckTouch()
         {
-            _ray = _camera.ScreenPointToRay(Input.mousePosition);
-                
+            _ray = _camera.ScreenPointToRay(_mousePosition);
+
             if (Physics.Raycast(_ray, out _hit, 30))
             {
                 if (_hit.collider.gameObject.GetInstanceID() == _ballID)
                 {
                     _isBallTouched = true;
-                    _touchStartPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+                    _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
                         _ball.transform.position.z);
                 }
             }
@@ -67,13 +82,18 @@ namespace RampJump
             {
                 _startPlace.SetActive(false);
                 _touchDirection =
-                    new Vector3(Input.mousePosition.x, Input.mousePosition.y, _ball.transform.position.z);
+                    new Vector3(_mousePosition.x, _mousePosition.y, _ball.transform.position.z);
                 _ballRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
                 _isBallTouched = false;
             }
         }
 
-
+        public void Cleanup()
+        {
+            _userInput.OnTouchDown -= OnMouseButtonDown;
+            _userInput.OnTouchUp -= OnMouseButtonUp;
+            _userInput.OnChangeMousePosition -= GetMousePosition;
+        }
 
     }
-}
+}  

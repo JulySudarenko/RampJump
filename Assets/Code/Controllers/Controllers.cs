@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using Code.Interfaces;
+using Code.UserInput;
 
-namespace Code.UserInput
+namespace Code.Controllers
 {
     internal sealed class Controllers : IInitialize, IFixedExecute, IExecute, ICleanup
     {
