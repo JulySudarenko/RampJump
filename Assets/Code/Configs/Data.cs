@@ -6,8 +6,8 @@ namespace Code.Configs
     [CreateAssetMenu(fileName = "Data", menuName = "Configs/Data", order = 0)]
     internal class Data : ScriptableObject
     {
-        private string _activeObjectsConfigPath = "ActiveObjects";
-        private string _levelObjectsConfigPath = "LevelObjects";
+        [SerializeField] private string _activeObjectsConfigPath = "ActiveObjects";
+        [SerializeField] private string _levelObjectsConfigPath = "LevelObjects";
 
         private ActiveObjectConfig[] _activeObjectConfigs;
         private LevelObjectConfig[] _levelObjectConfigs;
@@ -16,24 +16,16 @@ namespace Code.Configs
         {
             get
             {
-                if (_activeObjectConfigs == null)
-                {
-                    _activeObjectConfigs = Extentions.LoadAll<ActiveObjectConfig>(_activeObjectsConfigPath);
-                }
-
+                _activeObjectConfigs = Extentions.LoadAll<ActiveObjectConfig>(_activeObjectsConfigPath);
                 return _activeObjectConfigs;
             }
         }
-        
+
         public LevelObjectConfig[] LevelObjectConfig
         {
             get
             {
-                if (_levelObjectConfigs == null)
-                {
-                    _levelObjectConfigs = Extentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
-                }
-
+                _levelObjectConfigs = Extentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
                 return _levelObjectConfigs;
             }
         }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Factory
+namespace Code.UniversalFactory
 {
     internal class ObjectInitialization
     {
@@ -11,10 +11,10 @@ namespace Code.Factory
             _factory = factory;
         }
 
-        public Transform Create()
+        public GameObject Create()
         {
             var newObject = _factory.Create();
-            return newObject.transform;
+            return newObject;
         }
     }
 }

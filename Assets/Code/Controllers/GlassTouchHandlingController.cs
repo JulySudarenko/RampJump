@@ -7,12 +7,12 @@ namespace Code.Controllers
     public class GlassTouchHandlingController : IInitialize, IFixedExecute, ICleanup
     {
         private readonly GameObject _glass;
-        private readonly Transform _startPosition;
+        private readonly Vector3 _startPosition;
         private readonly Camera _camera;
         private readonly IUserInput _userInput;
         private readonly int _glassID;
-
-        private readonly float _speed = 3.0f;
+        private float _speed;
+        //private readonly float _speed = 3.0f;
         private Ray _ray;
         private RaycastHit _hit;
 
@@ -26,19 +26,20 @@ namespace Code.Controllers
 
         private bool _isGlassTouched;
 
-        public GlassTouchHandlingController(GameObject glass, Transform startPosition, Camera camera,
+        public GlassTouchHandlingController(GameObject glass, float speed, Vector3 startPosition, Camera camera,
             IUserInput userInput)
         {
             _glass = glass;
             _startPosition = startPosition;
             _camera = camera;
+            _speed = speed;
             _userInput = userInput;
             _glassID = _glass.GetComponentInChildren<CapsuleCollider>().gameObject.GetInstanceID();
         }
 
         public void Initialize()
         {
-            _glass.transform.position = _startPosition.position;
+            _glass.transform.position = _startPosition;
             _isGlassTouched = false;
             _userInput.OnTouchDown += OnMouseButtonDown;
             _userInput.OnTouchUp += OnMouseButtonUp;

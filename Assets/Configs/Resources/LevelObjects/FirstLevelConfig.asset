@@ -10,16 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
-  m_Name: TestLevelConfig
+  m_Name: FirstLevelConfig
   m_EditorClassIdentifier: 
-  LevelDetailsPrefabs:
-  - {fileID: 2784333745737447054, guid: d59bae6b73b720b42b892aff991523f8, type: 3}
-  - {fileID: 4834675145029128718, guid: d4ba5502c0889cd4696f7e8395a2248e, type: 3}
-  - {fileID: 8013377177820549449, guid: 8e6202f43a0e3124ba2ae23bb66e97c5, type: 3}
+  LevelDetailsPrefabs: []
   BallStartPlace: {fileID: 4497406110275584548, guid: e48b0b3b646877447915f34c5c84572d,
     type: 3}
   BallStartPosition: {fileID: 4049261812435709710, guid: e13a4f166510c7a4188d5bf23457aba1,
     type: 3}
   GlassStartPosition: {fileID: 3431001574448803261, guid: 5772401e453f4a747a72c0f9c34b6d9b,
     type: 3}
-  _levelNumber: 0
+  _levelNumber: 1

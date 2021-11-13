@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Factory
+namespace Code.UniversalFactory
 {
     internal interface IFactory
     {

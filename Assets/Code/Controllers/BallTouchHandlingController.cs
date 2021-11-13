@@ -9,9 +9,9 @@ namespace Code.Controllers
         private readonly GameObject _ball;
         private readonly GameObject _startPlace;
         private readonly IUserInput _userInput;
-        private readonly Transform _startPosition;
+        private readonly Vector3 _startPosition;
         private readonly Camera _camera;
-        private readonly float _force = 500.0f;
+        private readonly float _force;
         private readonly Rigidbody _ballRigidbody;
         private readonly int _ballID;
         private Ray _ray;
@@ -23,12 +23,13 @@ namespace Code.Controllers
         private bool _isMouseButtonDown;
         private bool _isMouseButtonUp;
 
-        public BallTouchHandlingController(GameObject ball, Transform startPosition, GameObject startPlace,
+        public BallTouchHandlingController(GameObject ball, float speed, Vector3 startPosition, GameObject startPlace,
             Camera camera, IUserInput userInput)
         {
             _ball = ball;
             _startPlace = startPlace;
             _startPosition = startPosition;
+            _force = speed;
             _camera = camera;
              _userInput = userInput;
              _ballRigidbody = _ball.GetComponentInChildren<Rigidbody>();
@@ -37,7 +38,7 @@ namespace Code.Controllers
 
         public void Initialize()
         {
-            _ball.transform.position = _startPosition.position;
+            _ball.transform.position = _startPosition;
             _isBallTouched = false;
             _userInput.OnTouchDown += OnMouseButtonDown;
             _userInput.OnTouchUp += OnMouseButtonUp;
