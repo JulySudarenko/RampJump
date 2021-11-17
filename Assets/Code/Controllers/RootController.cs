@@ -12,17 +12,19 @@ namespace Code.Controllers
         
         private void Start()
         {
-            var configParser = new ConfigParser(_data);
+            var configParser = new ActiveObjectsConfigParser(_data);
+            var levelParser = new LevelObjectsConfigParser(_data);
             Camera camera = Camera.main;
 
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
             
+            
             var ballTouchHandlingController = new BallTouchHandlingController(
-                configParser.BallObject, configParser.BallSpeed, configParser.BallStartPosition, 
-                configParser.BallStartPlace, camera, input);
+                configParser.BallObject, configParser.BallSpeed, levelParser.BallStartPosition, 
+                levelParser.BallStartPlace, camera, input);
             var glassTouchHandlingController = new GlassTouchHandlingController(
-                configParser.GlassObject, configParser.GlassSpeed, configParser.GlassStartPosition, camera, input);
+                configParser.GlassObject, configParser.GlassSpeed, levelParser.GlassStartPosition, camera, input);
             
             _controllers = new Controllers();
             _controllers.Add(inputController);

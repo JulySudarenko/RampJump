@@ -31,9 +31,10 @@
           </e>
           <e p="RampJump.asmdef" t="Include" />
           <e p="UniversalFactory" t="Include">
-            <e p="ConfigParser.cs" t="Include" />
+            <e p="ActiveObjectsConfigParser.cs" t="Include" />
             <e p="Factory.cs" t="Include" />
             <e p="IFactory.cs" t="Include" />
+            <e p="LevelObjectsConfigParser.cs" t="Include" />
             <e p="ObjectInitialization.cs" t="Include" />
           </e>
           <e p="UserInput" t="Include">
