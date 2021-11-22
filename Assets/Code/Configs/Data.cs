@@ -16,7 +16,7 @@ namespace Code.Configs
         {
             get
             {
-                _activeObjectConfigs = Extentions.LoadAll<ActiveObjectConfig>(_activeObjectsConfigPath);
+                _activeObjectConfigs = HelperExtentions.LoadAll<ActiveObjectConfig>(_activeObjectsConfigPath);
                 return _activeObjectConfigs;
             }
         }
@@ -25,7 +25,7 @@ namespace Code.Configs
         {
             get
             {
-                _levelObjectConfigs = Extentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
+                _levelObjectConfigs = HelperExtentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
                 return _levelObjectConfigs;
             }
         }

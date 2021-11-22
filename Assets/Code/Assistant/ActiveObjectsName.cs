@@ -4,7 +4,8 @@
     {
         Ball = 0,
         Glass = 1,
-        Arrow = 2
+        Arrow = 2,
+        Hole = 3
     }
 }
 

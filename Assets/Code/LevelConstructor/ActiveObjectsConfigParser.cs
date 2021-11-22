@@ -1,25 +1,22 @@
 ﻿using System;
 using Code.Configs;
+using Code.Models;
 using UnityEngine;
 using static Code.Assistant.ActiveObjectsName;
-
 
 namespace Code.UniversalFactory
 {
     internal class ActiveObjectsConfigParser
     {
-        public GameObject BallObject;
-        public GameObject GlassObject;
-        public GameObject ArrowObject;
-        public float BallSpeed;
-        public float GlassSpeed;
-        public float ArrowSpeed;
+        public IBallModel BallModel;
+        public Transform ArrowObject;
+        public Transform HoleObject;
 
         private readonly ActiveObjectConfig[] _activeObjectConfigs;
 
-        public ActiveObjectsConfigParser(Data data)
+        public ActiveObjectsConfigParser(ActiveObjectConfig[] data)
         {
-            _activeObjectConfigs = data.ActiveObjectConfig;
+            _activeObjectConfigs = data;
 
             Init();
         }
@@ -31,16 +28,15 @@ namespace Code.UniversalFactory
                 switch (_activeObjectConfigs[i].Name)
                 {
                     case Ball:
-                        BallSpeed = _activeObjectConfigs[i].Speed;
-                        BallObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
+                       BallModel = new BallModel(_activeObjectConfigs[i]); 
                         break;
                     case Arrow:
-                        ArrowSpeed = _activeObjectConfigs[i].Speed;
                         ArrowObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
                         break;
                     case Glass:
-                        GlassSpeed = _activeObjectConfigs[i].Speed;
-                        GlassObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
+                        break;
+                    case Hole:
+                        HoleObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

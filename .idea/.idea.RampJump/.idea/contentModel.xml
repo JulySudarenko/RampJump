@@ -8,7 +8,7 @@
         <e p="Code" t="Include">
           <e p="Assistant" t="Include">
             <e p="ActiveObjectsName.cs" t="Include" />
-            <e p="Extentions.cs" t="Include" />
+            <e p="HelperExtentions.cs" t="Include" />
           </e>
           <e p="Configs" t="Include">
             <e p="ActiveObjectConfig.cs" t="Include" />
@@ -16,30 +16,48 @@
             <e p="LevelObjectConfig.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
+            <e p="ArrowController.cs" t="Include" />
             <e p="BallTouchHandlingController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
-            <e p="GlassTouchHandlingController.cs" t="Include" />
+            <e p="GameplayController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
+            <e p="LevelController.cs" t="Include" />
             <e p="RootController.cs" t="Include" />
+            <e p="StopGame.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
+            <e p="IBallEvents.cs" t="Include" />
             <e p="ICleanup.cs" t="Include" />
             <e p="IController.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
+            <e p="IFinishEvents.cs" t="Include" />
             <e p="IFixedExecute.cs" t="Include" />
             <e p="IInitialize.cs" t="Include" />
           </e>
+          <e p="LevelConstructor" t="Include">
+            <e p="ActiveObjectsConfigParser.cs" t="Include" />
+            <e p="ILevel.cs" t="Include" />
+            <e p="LevelDetail.cs" t="Include" />
+            <e p="LevelDetailsList.cs" t="Include" />
+            <e p="LevelObjectsConfigParser.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="BallModel.cs" t="Include" />
+            <e p="IBallModel.cs" t="Include" />
+          </e>
           <e p="RampJump.asmdef" t="Include" />
           <e p="UniversalFactory" t="Include">
-            <e p="ActiveObjectsConfigParser.cs" t="Include" />
             <e p="Factory.cs" t="Include" />
             <e p="IFactory.cs" t="Include" />
-            <e p="LevelObjectsConfigParser.cs" t="Include" />
             <e p="ObjectInitialization.cs" t="Include" />
+            <e p="TriggerContacts.cs" t="Include" />
           </e>
           <e p="UserInput" t="Include">
             <e p="IUserInput.cs" t="Include" />
             <e p="UserInputHandling.cs" t="Include" />
+          </e>
+          <e p="View" t="Include">
+            <e p="EndGameView.cs" t="Include" />
           </e>
         </e>
       </e>

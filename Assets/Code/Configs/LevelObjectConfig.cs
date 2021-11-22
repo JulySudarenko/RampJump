@@ -10,6 +10,7 @@ namespace Code.Configs
         public Transform BallStartPlace;
         public Transform BallStartPosition;
         public Transform GlassStartPosition;
+        public Transform HoleStartPosition;
         [SerializeField] private int _levelNumber;
 
         public int LevelNumber => _levelNumber;

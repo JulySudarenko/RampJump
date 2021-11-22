@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Code.Configs
 {
     [CreateAssetMenu(fileName = "ActiveObjectConfig", menuName = "Configs/ActiveObjectConfig", order = 0)]
-    internal class ActiveObjectConfig : ScriptableObject
+    public class ActiveObjectConfig : ScriptableObject
     {
         public Transform Prefab;
         [SerializeField] private float _speed;

@@ -11,10 +11,10 @@ namespace Code.UniversalFactory
             _factory = factory;
         }
 
-        public GameObject Create()
+        public Transform Create()
         {
             var newObject = _factory.Create();
-            return newObject;
+            return newObject.transform;
         }
     }
 }

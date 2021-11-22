@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.UserInput
 {
-    public class UserInputHandling : IUserInput
+    internal class UserInputHandling : IUserInput
     {
         public event Action<bool> OnTouchDown = delegate(bool b) {  };
         public event Action<bool> OnTouchUp = delegate(bool b) {  };
