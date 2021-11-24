@@ -43,11 +43,6 @@ namespace Code.Controllers
             _controllers.Execute(Time.deltaTime);
         }
 
-        private void FixedUpdate()
-        {
-            _controllers.FixedExecute(Time.fixedDeltaTime);
-        }
-
         private void OnDestroy()
         {
             _controllers.Cleanup();

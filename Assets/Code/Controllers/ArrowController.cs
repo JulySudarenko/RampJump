@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal sealed class ArrowController : IInitialize, IFixedExecute, ICleanup
+    internal sealed class ArrowController : IInitialize, IExecute, ICleanup
     {
         private readonly IUserInput _userInput;
         private readonly IBallEvents _ballEvents;
@@ -46,7 +46,7 @@ namespace Code.Controllers
         private void GetMousePosition(Vector3 position) => _mousePosition = position;
         private void OnMouseButton(bool value) => _isMouseButton = value;
 
-        public void FixedExecute(float deltaTime)
+        public void Execute(float deltaTime)
         {
             if (_isBallTouched && _isMouseButtonDown)
             {

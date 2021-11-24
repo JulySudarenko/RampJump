@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Code.Controllers
 {
-    public class BallTouchHandlingController : IInitialize, IFixedExecute, ICleanup, IBallEvents
+    public class BallTouchHandlingController : IInitialize, IExecute, ICleanup, IBallEvents
     {
         public event Action<bool> OnBallTouched;
         public event Action<bool> OnBallKicked;
@@ -53,7 +53,7 @@ namespace Code.Controllers
         private void OnMouseButton(bool value) => _isMouseButton = value;
         private void GetMousePosition(Vector3 position) => _mousePosition = position;
 
-        public void FixedExecute(float deltaTime)
+        public void Execute(float deltaTime)
         {
             if (_isMouseButtonDown)
             {
