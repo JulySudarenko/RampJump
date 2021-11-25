@@ -11,30 +11,31 @@ namespace Code.Controllers
         public event Action<bool> OnBallTouched;
         public event Action<bool> OnBallKicked;
 
+        private const float HIT_DISTANCE = 100.0f;
         private readonly IBallModel _ballModel;
+        private readonly IBallForceModel _ballForceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
         private Ray _ray;
         private RaycastHit _hit;
-        private Renderer _renderer;
         private Color _colorStart;
         private Vector3 _touchStartPosition;
         private Vector3 _touchDirection;
         private Vector3 _mousePosition;
         private float _force;
         private float _ballChangeColorSpeed;
-        private float _forceRiseFactor = 50.0f;
-        private float _colorRiseFactor = 5.0f;
         private bool _isBallTouched;
         private bool _isMouseButtonDown;
         private bool _isMouseButtonUp;
         private bool _isMouseButton;
 
-        public BallTouchHandlingController(IBallModel ballModel, Camera camera, IUserInput userInput)
+        public BallTouchHandlingController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
+            IUserInput userInput)
         {
             _ballModel = ballModel;
             _camera = camera;
             _userInput = userInput;
+            _ballForceModel = forceModel;
         }
 
         public void Initialize()
@@ -44,8 +45,7 @@ namespace Code.Controllers
             _userInput.OnTouchUp += OnMouseButtonUp;
             _userInput.OnTouch += OnMouseButton;
             _userInput.OnChangeMousePosition += GetMousePosition;
-            _renderer = _ballModel.Ball.GetComponentInChildren<Renderer>();
-            _colorStart = _renderer.material.color;
+            _colorStart = _ballModel.BallRenderer.material.color;
         }
 
         private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;
@@ -78,7 +78,7 @@ namespace Code.Controllers
         {
             _ray = _camera.ScreenPointToRay(_mousePosition);
 
-            if (Physics.Raycast(_ray, out _hit, 100))
+            if (Physics.Raycast(_ray, out _hit, HIT_DISTANCE))
             {
                 if (_hit.collider.gameObject.GetInstanceID() == _ballModel.BallID)
                 {
@@ -87,18 +87,17 @@ namespace Code.Controllers
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
                         _ballModel.Ball.position.z);
                     _ballChangeColorSpeed = 0.0f;
-                    _force = _ballModel.BallSpeed;
+                    _force = _ballForceModel.BallForce;
                 }
             }
         }
 
         private void IncreaseTheSpeed(float deltaTime)
         {
-            _force += deltaTime * _forceRiseFactor;
-            _ballChangeColorSpeed += deltaTime / _colorRiseFactor;
-            _renderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
+            _force += deltaTime * _ballForceModel.ForceRiseFactor;
+            _ballChangeColorSpeed += deltaTime / _ballForceModel.ColorRiseFactor;
+            _ballModel.BallRenderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
         }
-
 
         private void KickTheBall()
         {
@@ -108,7 +107,7 @@ namespace Code.Controllers
             _isBallTouched = false;
             OnBallTouched?.Invoke(false);
             OnBallKicked?.Invoke(true);
-            _renderer.material.color = _colorStart;
+            _ballModel.BallRenderer.material.color = _colorStart;
         }
 
         public void Cleanup()

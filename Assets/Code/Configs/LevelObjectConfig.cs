@@ -7,9 +7,9 @@ namespace Code.Configs
     internal class LevelObjectConfig : ScriptableObject
     {
         public List<Transform> LevelDetailsPrefabs;
+        public Transform BottomPrefab;
         public Transform BallStartPlace;
         public Transform BallStartPosition;
-        public Transform GlassStartPosition;
         public Transform HoleStartPosition;
         [SerializeField] private int _levelNumber;
 

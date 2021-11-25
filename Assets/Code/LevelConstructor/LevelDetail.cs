@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.UniversalFactory
+namespace Code.LevelConstructor
 {
     internal class LevelDetail
     {

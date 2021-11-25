@@ -1,10 +1,13 @@
-﻿using Code.Configs;
+﻿using Code.Assistant;
+using Code.Configs;
+using Code.UniversalFactory;
 using UnityEngine;
 
-namespace Code.UniversalFactory
+namespace Code.LevelConstructor
 {
     internal class LevelObjectsConfigParser : ILevel
     {
+        public Transform Bottom { get; private set; }
         public Transform BallStartPlace { get; private set; }
         public Vector3 BallStartPosition { get; private set; }
         public Vector3 HoleStartPosition { get; private set; }
@@ -22,6 +25,7 @@ namespace Code.UniversalFactory
 
         private void Init()
         {
+            Bottom = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BottomPrefab)).Create();
             BallStartPlace = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BallStartPlace))
                 .Create();
             for (int i = 0; i < _levelObjectConfigs.Length; i++)

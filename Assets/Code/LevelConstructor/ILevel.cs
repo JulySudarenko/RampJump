@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
-namespace Code.UniversalFactory
+namespace Code.LevelConstructor
 {
     internal interface ILevel
     {
+        Transform Bottom { get; }
         Transform BallStartPlace { get; }
         Vector3 BallStartPosition { get; }
         Vector3 HoleStartPosition { get; }

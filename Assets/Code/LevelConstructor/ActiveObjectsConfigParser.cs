@@ -1,20 +1,18 @@
-﻿using System;
-using Code.Configs;
+﻿using Code.Configs;
 using Code.Models;
+using Code.UniversalFactory;
 using UnityEngine;
-using static Code.Assistant.ActiveObjectsName;
 
-namespace Code.UniversalFactory
+namespace Code.LevelConstructor
 {
     internal class ActiveObjectsConfigParser
     {
-        public IBallModel BallModel;
-        public Transform ArrowObject;
-        public Transform HoleObject;
+        public IBallModel BallModel { get; private set; }
+        public Transform ArrowObject { get; private set; }
+        public Transform HoleObject { get; private set; }
+        private readonly ActiveObjectConfig _activeObjectConfigs;
 
-        private readonly ActiveObjectConfig[] _activeObjectConfigs;
-
-        public ActiveObjectsConfigParser(ActiveObjectConfig[] data)
+        public ActiveObjectsConfigParser(ActiveObjectConfig data)
         {
             _activeObjectConfigs = data;
 
@@ -23,25 +21,9 @@ namespace Code.UniversalFactory
 
         private void Init()
         {
-            for (int i = 0; i < _activeObjectConfigs.Length; i++)
-            {
-                switch (_activeObjectConfigs[i].Name)
-                {
-                    case Ball:
-                       BallModel = new BallModel(_activeObjectConfigs[i]); 
-                        break;
-                    case Arrow:
-                        ArrowObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
-                        break;
-                    case Glass:
-                        break;
-                    case Hole:
-                        HoleObject = new ObjectInitialization(new Factory(_activeObjectConfigs[i].Prefab)).Create();
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
-            }
+            BallModel = new BallModel(_activeObjectConfigs);
+            ArrowObject = new ObjectInitialization(new Factory(_activeObjectConfigs.ArrowPrefab)).Create();
+            HoleObject = new ObjectInitialization(new Factory(_activeObjectConfigs.HolePrefab)).Create();
         }
     }
 }

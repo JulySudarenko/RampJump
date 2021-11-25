@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelDetailsPrefabs:
   - {fileID: 1792430581266145064, guid: 786b5ae0e13b28443aec5d1e0ad94ed3, type: 3}
+  BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
+    type: 3}
   BallStartPlace: {fileID: 4497406110275584548, guid: e48b0b3b646877447915f34c5c84572d,
     type: 3}
   BallStartPosition: {fileID: 4049261812435709710, guid: e13a4f166510c7a4188d5bf23457aba1,
-    type: 3}
-  GlassStartPosition: {fileID: 3431001574448803261, guid: 5772401e453f4a747a72c0f9c34b6d9b,
     type: 3}
   HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
     type: 3}

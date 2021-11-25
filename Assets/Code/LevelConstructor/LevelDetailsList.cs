@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace Code.UniversalFactory
+namespace Code.LevelConstructor
 {
     internal sealed class LevelDetailsList : IEnumerator, IEnumerable
     {

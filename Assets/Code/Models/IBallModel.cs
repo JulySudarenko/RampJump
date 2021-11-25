@@ -7,7 +7,7 @@ namespace Code.Models
         Transform Ball { get; }
         Rigidbody BallRigidbody { get; }
         SphereCollider BallCollider { get; }
-        float BallSpeed { get; }
+        Renderer BallRenderer { get; }
         int BallID { get; }
     }
 }

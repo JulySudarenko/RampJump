@@ -1,5 +1,5 @@
 ﻿using Code.Configs;
-using Code.UniversalFactory;
+using Code.LevelConstructor;
 using Code.UserInput;
 using Code.View;
 using UnityEngine;
@@ -20,8 +20,8 @@ namespace Code.Controllers
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
 
-            var ballTouchHandlingController = new BallTouchHandlingController(configParser.BallModel,
-                camera, input);
+            var ballTouchHandlingController = new BallTouchHandlingController(configParser.BallModel, 
+                _data.ActiveObjectConfig, camera, input);
             var arrowController = new ArrowController(ballTouchHandlingController, configParser.ArrowObject, input);
 
             var gameplayController = new GameplayController(ballTouchHandlingController, configParser.HoleObject,

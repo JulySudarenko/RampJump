@@ -8,16 +8,16 @@ namespace Code.Models
     {
         public Transform Ball { get; }
         public Rigidbody BallRigidbody { get; }
+        public Renderer BallRenderer { get; }
         public SphereCollider BallCollider { get; }
-        public float BallSpeed { get; }
         public int BallID { get; }
 
         public BallModel(ActiveObjectConfig config)
         {
-            BallSpeed = config.Speed;
-            Ball = new ObjectInitialization(new Factory(config.Prefab)).Create();
-            BallRigidbody = Ball.GetComponentInChildren<Rigidbody>(Ball.gameObject);
+            Ball = new ObjectInitialization(new Factory(config.BallPrefab)).Create();
+            BallRigidbody = Ball.GetComponentInChildren<Rigidbody>();
             BallCollider = Ball.GetComponentInChildren<SphereCollider>();
+            BallRenderer = Ball.GetComponentInChildren<Renderer>();
             BallID = BallCollider.gameObject.GetInstanceID();
         }
     }
