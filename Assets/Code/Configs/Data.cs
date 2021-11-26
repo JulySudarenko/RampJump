@@ -1,4 +1,5 @@
 ﻿using Code.Assistant;
+using Code.Models;
 using UnityEngine;
 
 namespace Code.Configs
@@ -6,17 +7,22 @@ namespace Code.Configs
     [CreateAssetMenu(fileName = "Data", menuName = "Configs/Data", order = 0)]
     internal class Data : ScriptableObject
     {
-        [SerializeField] private string _activeObjectsConfigPath = "ActiveObjects";
+        [SerializeField] private string _activeObjectsConfigPath = "ActiveObjectConfig";
         [SerializeField] private string _levelObjectsConfigPath = "LevelObjects";
 
-        private ActiveObjectConfig[] _activeObjectConfigs;
+        private ActiveObjectConfig _activeObjectConfigs;
         private LevelObjectConfig[] _levelObjectConfigs;
 
-        public ActiveObjectConfig[] ActiveObjectConfig
+        public ActiveObjectConfig ActiveObjectConfig
         {
             get
             {
-                _activeObjectConfigs = Extentions.LoadAll<ActiveObjectConfig>(_activeObjectsConfigPath);
+                if (_activeObjectConfigs == null)
+                {
+                    _activeObjectConfigs = HelperExtentions.Load<ActiveObjectConfig>(
+                        "ActiveObjects/" + _activeObjectsConfigPath);
+                }
+
                 return _activeObjectConfigs;
             }
         }
@@ -25,7 +31,7 @@ namespace Code.Configs
         {
             get
             {
-                _levelObjectConfigs = Extentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
+                _levelObjectConfigs = HelperExtentions.LoadAll<LevelObjectConfig>(_levelObjectsConfigPath);
                 return _levelObjectConfigs;
             }
         }

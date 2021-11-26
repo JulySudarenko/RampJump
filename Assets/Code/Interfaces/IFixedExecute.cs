@@ -1,6 +1,4 @@
-﻿using Code.Interfaces;
-
-namespace Code.UserInput
+﻿namespace Code.Interfaces
 {
     internal interface IFixedExecute : IController
     {

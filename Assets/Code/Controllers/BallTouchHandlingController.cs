@@ -1,64 +1,76 @@
-﻿using Code.Interfaces;
+﻿using System;
+using Code.Interfaces;
+using Code.Models;
 using Code.UserInput;
 using UnityEngine;
 
 namespace Code.Controllers
 {
-    public class BallTouchHandlingController : IInitialize, IFixedExecute, ICleanup
+    public class BallTouchHandlingController : IInitialize, IExecute, ICleanup, IBallEvents
     {
-        private readonly GameObject _ball;
-        private readonly GameObject _startPlace;
+        public event Action<bool> OnBallTouched;
+        public event Action<bool> OnBallKicked;
+
+        private const float HIT_DISTANCE = 100.0f;
+        private readonly IBallModel _ballModel;
+        private readonly IBallForceModel _ballForceModel;
         private readonly IUserInput _userInput;
-        private readonly Vector3 _startPosition;
         private readonly Camera _camera;
-        private readonly float _force;
-        private readonly Rigidbody _ballRigidbody;
-        private readonly int _ballID;
         private Ray _ray;
         private RaycastHit _hit;
+        private Color _colorStart;
         private Vector3 _touchStartPosition;
         private Vector3 _touchDirection;
         private Vector3 _mousePosition;
+        private float _force;
+        private float _ballChangeColorSpeed;
         private bool _isBallTouched;
         private bool _isMouseButtonDown;
         private bool _isMouseButtonUp;
+        private bool _isMouseButton;
 
-        public BallTouchHandlingController(GameObject ball, float speed, Vector3 startPosition, GameObject startPlace,
-            Camera camera, IUserInput userInput)
+        public BallTouchHandlingController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
+            IUserInput userInput)
         {
-            _ball = ball;
-            _startPlace = startPlace;
-            _startPosition = startPosition;
-            _force = speed;
+            _ballModel = ballModel;
             _camera = camera;
-             _userInput = userInput;
-             _ballRigidbody = _ball.GetComponentInChildren<Rigidbody>();
-             _ballID = _ball.GetComponentInChildren<SphereCollider>().gameObject.GetInstanceID();
+            _userInput = userInput;
+            _ballForceModel = forceModel;
         }
 
         public void Initialize()
         {
-            _ball.transform.position = _startPosition;
             _isBallTouched = false;
             _userInput.OnTouchDown += OnMouseButtonDown;
             _userInput.OnTouchUp += OnMouseButtonUp;
+            _userInput.OnTouch += OnMouseButton;
             _userInput.OnChangeMousePosition += GetMousePosition;
+            _colorStart = _ballModel.BallRenderer.material.color;
         }
-        
+
         private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;
         private void OnMouseButtonUp(bool value) => _isMouseButtonUp = value;
+        private void OnMouseButton(bool value) => _isMouseButton = value;
         private void GetMousePosition(Vector3 position) => _mousePosition = position;
-        
-        public void FixedExecute(float deltaTime)
+
+        public void Execute(float deltaTime)
         {
             if (_isMouseButtonDown)
             {
                 CheckTouch();
             }
 
-            if (_isMouseButtonUp)
+            if (_isBallTouched)
             {
-                KickTheBall();
+                if (_isMouseButton)
+                {
+                    IncreaseTheSpeed(deltaTime);
+                }
+
+                if (_isMouseButtonUp)
+                {
+                    KickTheBall();
+                }
             }
         }
 
@@ -66,35 +78,44 @@ namespace Code.Controllers
         {
             _ray = _camera.ScreenPointToRay(_mousePosition);
 
-            if (Physics.Raycast(_ray, out _hit, 30))
+            if (Physics.Raycast(_ray, out _hit, HIT_DISTANCE))
             {
-                if (_hit.collider.gameObject.GetInstanceID() == _ballID)
+                if (_hit.collider.gameObject.GetInstanceID() == _ballModel.BallID)
                 {
                     _isBallTouched = true;
+                    OnBallTouched?.Invoke(true);
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
-                        _ball.transform.position.z);
+                        _ballModel.Ball.position.z);
+                    _ballChangeColorSpeed = 0.0f;
+                    _force = _ballForceModel.BallForce;
                 }
             }
         }
 
+        private void IncreaseTheSpeed(float deltaTime)
+        {
+            _force += deltaTime * _ballForceModel.ForceRiseFactor;
+            _ballChangeColorSpeed += deltaTime / _ballForceModel.ColorRiseFactor;
+            _ballModel.BallRenderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
+        }
+
         private void KickTheBall()
         {
-            if (_isBallTouched)
-            {
-                _startPlace.SetActive(false);
-                _touchDirection =
-                    new Vector3(_mousePosition.x, _mousePosition.y, _ball.transform.position.z);
-                _ballRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
-                _isBallTouched = false;
-            }
+            _touchDirection =
+                new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
+            _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
+            _isBallTouched = false;
+            OnBallTouched?.Invoke(false);
+            OnBallKicked?.Invoke(true);
+            _ballModel.BallRenderer.material.color = _colorStart;
         }
 
         public void Cleanup()
         {
             _userInput.OnTouchDown -= OnMouseButtonDown;
             _userInput.OnTouchUp -= OnMouseButtonUp;
+            _userInput.OnTouch -= OnMouseButton;
             _userInput.OnChangeMousePosition -= GetMousePosition;
         }
-
     }
-}  
+}
