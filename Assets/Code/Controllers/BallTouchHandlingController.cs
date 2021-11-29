@@ -12,6 +12,7 @@ namespace Code.Controllers
         public event Action<bool> OnBallKicked;
 
         private const float HIT_DISTANCE = 100.0f;
+        private const float MAX_FORCE = 3200.0f;
         private readonly IBallModel _ballModel;
         private readonly IBallForceModel _ballForceModel;
         private readonly IUserInput _userInput;
@@ -96,6 +97,9 @@ namespace Code.Controllers
         {
             _force += deltaTime * _ballForceModel.ForceRiseFactor;
             _ballChangeColorSpeed += deltaTime / _ballForceModel.ColorRiseFactor;
+            if (_force >= MAX_FORCE)
+                _force = MAX_FORCE;
+            Debug.Log($"Ball speed {_force}");
             _ballModel.BallRenderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
         }
 

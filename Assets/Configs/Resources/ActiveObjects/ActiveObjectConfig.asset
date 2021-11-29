@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 5328258765714074911, guid: 6c0fdc59f667cc34f8b23e9a6fe01e4e,
     type: 3}
-  ArrowPrefab: {fileID: 5113688254111110004, guid: 0ea9510e901afe94d92d045b872838cf,
+  ArrowPrefab: {fileID: 731304322884785928, guid: 91dd5d16a2403d842906b4a73bb6a2ca,
     type: 3}
   HolePrefab: {fileID: 3316087685051157024, guid: 90605dffc7a4c934fa5bc8d09ab432c2,
     type: 3}
-  _force: 1000
-  _forceRiseFactor: 50
-  _colorRiseFactor: 5
+  _force: 500
+  _forceRiseFactor: 300
+  _colorRiseFactor: 10

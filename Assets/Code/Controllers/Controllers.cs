@@ -1,20 +1,17 @@
 ﻿using System.Collections.Generic;
 using Code.Interfaces;
-using Code.UserInput;
 
 namespace Code.Controllers
 {
-    internal sealed class Controllers : IInitialize, IFixedExecute, IExecute, ICleanup
+    internal sealed class Controllers : IInitialize, IExecute, ICleanup
     {
         private readonly List<IInitialize> _initializeControllers;
-        private readonly List<IFixedExecute> _fixedControllers; 
         private readonly List<IExecute> _executeControllers;
         private readonly List<ICleanup> _cleanupControllers;
 
         internal Controllers()
         {
             _initializeControllers = new List<IInitialize>();
-            _fixedControllers = new List<IFixedExecute>();
             _executeControllers = new List<IExecute>();
             _cleanupControllers = new List<ICleanup>();
         }
@@ -24,11 +21,6 @@ namespace Code.Controllers
             if (controller is IInitialize initializeController)
             {
                 _initializeControllers.Add(initializeController);
-            }
-            
-            if (controller is IFixedExecute fixedController)
-            {
-                _fixedControllers.Add(fixedController);
             }
 
             if (controller is IExecute executeController)
@@ -49,14 +41,6 @@ namespace Code.Controllers
             for (var index = 0; index < _initializeControllers.Count; ++index)
             {
                 _initializeControllers[index].Initialize();
-            }
-        }
-
-        public void FixedExecute(float deltaTime)
-        {
-            for (var index = 0; index < _fixedControllers.Count; ++index)
-            {
-                _fixedControllers[index].FixedExecute(deltaTime);
             }
         }
 

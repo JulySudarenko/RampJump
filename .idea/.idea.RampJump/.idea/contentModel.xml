@@ -31,7 +31,6 @@
             <e p="IController.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
             <e p="IFinishEvents.cs" t="Include" />
-            <e p="IFixedExecute.cs" t="Include" />
             <e p="IInitialize.cs" t="Include" />
           </e>
           <e p="LevelConstructor" t="Include">

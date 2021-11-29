@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: FirstLevelConfig
   m_EditorClassIdentifier: 
   LevelDetailsPrefabs:
-  - {fileID: 1792430581266145064, guid: 786b5ae0e13b28443aec5d1e0ad94ed3, type: 3}
+  - {fileID: 1235543319778305892, guid: 83962a0e50a59ef4cb98431396dbd17c, type: 3}
+  - {fileID: 2710110262407017292, guid: 175793ccd905d374fa9565adf9dbbd58, type: 3}
+  - {fileID: 3016781118219069092, guid: 6520397edc66079449af1a2ce9062ee5, type: 3}
   BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
     type: 3}
-  BallStartPlace: {fileID: 4497406110275584548, guid: e48b0b3b646877447915f34c5c84572d,
+  BallStartPlace: {fileID: 1554073518291111624, guid: 020da7d4dbc866e4f87b06bbdfa0ec4d,
     type: 3}
-  BallStartPosition: {fileID: 4049261812435709710, guid: e13a4f166510c7a4188d5bf23457aba1,
+  BallStartPosition: {fileID: 3182337993162572979, guid: 088fb825b03d9f54abe366e315fb6284,
     type: 3}
   HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
     type: 3}
-  _levelNumber: 1
+  _levelNumber: 3

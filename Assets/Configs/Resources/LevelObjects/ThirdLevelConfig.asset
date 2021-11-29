@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
+  m_Name: ThirdLevelConfig
+  m_EditorClassIdentifier: 
+  LevelDetailsPrefabs:
+  - {fileID: 1085864018092030260, guid: 10c235151cde17448a30f8cdedf92c21, type: 3}
+  - {fileID: 1891236311718030119, guid: 1fec7821634950e4083f3b4d692a733a, type: 3}
+  - {fileID: 4863865032267799161, guid: f2ffb362a46492d41acf3cbf50d8bd76, type: 3}
+  BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
+    type: 3}
+  BallStartPlace: {fileID: 1952842345901982637, guid: 9d5bf7a62def73941a8a3c3dc7222e55,
+    type: 3}
+  BallStartPosition: {fileID: 8141371023155581025, guid: 43352d4ff7e1aa3428f6b8f4b1aa9bb3,
+    type: 3}
+  HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
+    type: 3}
+  _levelNumber: 1
