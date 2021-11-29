@@ -66,8 +66,6 @@ namespace Code.Controllers
                 new Vector3(_mousePosition.x, _mousePosition.y, _arrow.position.z) - _touchStartPosition;
             _arrow.eulerAngles =
                 new Vector3(0, 0, Mathf.Atan2(_newDirection.y, _newDirection.x) * Mathf.Rad2Deg - 180);
-
-            _arrow.localScale = new Vector3(3.0f, 1.0f, 1.0f);
         }
 
         public void Cleanup()

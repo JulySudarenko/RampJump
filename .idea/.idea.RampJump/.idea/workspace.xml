@@ -20,44 +20,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316a0b96-01d5-4d50-b4ac-30d7036bf89f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Assistant/ActiveObjectsName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Assistant/ActiveObjectsName.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/Data.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetailsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetailsList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/IBallModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/IBallModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ArrowConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ArrowConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/BallConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/BallConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/GlassConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/GlassConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/HoleConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/HoleConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IFixedExecute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IFixedExecute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TestLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TestLevelConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TestLevelConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TestLevelConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TrashConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/TrashConfig.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Material/ArrowMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/ArrowMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Glass.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Glass.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/HoleStartPosition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/HoleStartPosition.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Walls.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Walls.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/BallPosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/BallPosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/BallStartPlace.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/BallStartPlace.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/GlassPosition.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/GlassPosition.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/HoleStartPosition.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/HoleStartPosition.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Stand2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Walls.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/TestLevel/Walls.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/BallStartPlace.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/BallStartPlace.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/BallStartTrash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/BallStartTrash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/Ramp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Trash/Ramp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Walls.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Walls.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IExecute.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInitialize.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ILevelObjects.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/ISpeed.cs" />
@@ -104,20 +115,16 @@
         <option value="$PROJECT_DIR$/Assets/Code/View/WinGameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/LevelObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/StopGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/MouseTestClicksHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UserInput/UserInputHandling.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetail.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetailsList.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Models/IBallModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Configs/Data.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" />
@@ -128,6 +135,11 @@
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
       </list>
     </option>
   </component>
@@ -156,10 +168,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18088">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18088" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
