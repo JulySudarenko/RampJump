@@ -99,7 +99,6 @@ namespace Code.Controllers
             _ballChangeColorSpeed += deltaTime / _ballForceModel.ColorRiseFactor;
             if (_force >= MAX_FORCE)
                 _force = MAX_FORCE;
-            Debug.Log($"Ball speed {_force}");
             _ballModel.BallRenderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
         }
 

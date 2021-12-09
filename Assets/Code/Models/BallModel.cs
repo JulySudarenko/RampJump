@@ -12,9 +12,9 @@ namespace Code.Models
         public SphereCollider BallCollider { get; }
         public int BallID { get; }
 
-        public BallModel(ActiveObjectConfig config)
+        public BallModel(ActiveObjectConfig config, Transform folder)
         {
-            Ball = new ObjectInitialization(new Factory(config.BallPrefab)).Create();
+            Ball = new ObjectInitialization(new Factory(config.BallPrefab, folder)).Create();
             BallRigidbody = Ball.GetComponentInChildren<Rigidbody>();
             BallCollider = Ball.GetComponentInChildren<SphereCollider>();
             BallRenderer = Ball.GetComponentInChildren<Renderer>();

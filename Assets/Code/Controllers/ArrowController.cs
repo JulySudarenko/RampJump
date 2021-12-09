@@ -9,6 +9,7 @@ namespace Code.Controllers
         private readonly IUserInput _userInput;
         private readonly IBallEvents _ballEvents;
         private readonly Transform _arrow;
+        private readonly Transform _ball;
         private Vector3 _mousePosition;
         private Vector3 _newPosition;
         private Vector3 _newDirection;
@@ -19,10 +20,10 @@ namespace Code.Controllers
         private bool _isBallTouched;
         private bool _isMouseButtonDown;
 
-        public ArrowController(IBallEvents ballEvents, Transform arrow,
-            IUserInput input)
+        public ArrowController(IBallEvents ballEvents, Transform arrow, IUserInput input, Transform ball)
         {
             _arrow = arrow;
+            _ball = ball;
             _ballEvents = ballEvents;
             _userInput = input;
         }
@@ -40,6 +41,7 @@ namespace Code.Controllers
         {
             _isBallTouched = value;
             _arrow.gameObject.SetActive(value);
+            _arrow.position = _ball.position;
         }
 
         private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;

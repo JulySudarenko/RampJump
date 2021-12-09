@@ -4,12 +4,12 @@ using Code.LevelConstructor;
 using Code.Models;
 using Code.View;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Code.Controllers
 {
     internal class LevelController : IInitialize, ICleanup
     {
+        public LevelComponentsList CoinsList { get; }
         private readonly IFinishEvents _finishEvents;
         private readonly IBallEvents _ballEvents;
         private readonly BallFallingHandler _ballFallingHandler;
@@ -33,6 +33,7 @@ namespace Code.Controllers
             _endGameView.RestartLevelButton.onClick.AddListener(_endGameView.Restart);
             _configParser = new LevelObjectsConfigParser(config);
             _ballFallingHandler = new BallFallingHandler(_configParser.Bottom, ball);
+            CoinsList = _configParser.CoinsList;
         }
 
         public void Initialize()

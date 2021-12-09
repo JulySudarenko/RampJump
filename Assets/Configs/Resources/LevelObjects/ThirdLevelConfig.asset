@@ -16,7 +16,11 @@ MonoBehaviour:
   - {fileID: 1085864018092030260, guid: 10c235151cde17448a30f8cdedf92c21, type: 3}
   - {fileID: 1891236311718030119, guid: 1fec7821634950e4083f3b4d692a733a, type: 3}
   - {fileID: 4863865032267799161, guid: f2ffb362a46492d41acf3cbf50d8bd76, type: 3}
-  BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
+  CoinsPlaces:
+  - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
+  BottomPrefab: {fileID: 397837023031585176, guid: d1a03739c3d703445b76d1e57431db8d,
+    type: 3}
+  CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
     type: 3}
   BallStartPlace: {fileID: 1952842345901982637, guid: 9d5bf7a62def73941a8a3c3dc7222e55,
     type: 3}
@@ -24,4 +28,4 @@ MonoBehaviour:
     type: 3}
   HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
     type: 3}
-  _levelNumber: 1
+  _levelNumber: 3

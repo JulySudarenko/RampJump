@@ -31,9 +31,8 @@ namespace Code.Controllers
         public void Initialize()
         {
             _previousPosition = _ballModel.Ball.position;
-            var colliderChild = _hole.GetComponentInChildren<CapsuleCollider>();
-            _contacts = HelperExtentions.GetOrAddComponent<TriggerContacts>(colliderChild.gameObject);
-            _contacts.IsStayContact += CheckHoleContact;
+            _contacts = HelperExtentions.GetOrAddComponent<TriggerContacts>(_hole.gameObject);
+            _contacts.IsContact += CheckHoleContact;
             _ballEvents.OnBallKicked += OnBallKickedChange;
         }
 
@@ -48,7 +47,7 @@ namespace Code.Controllers
             }
         }
 
-        private void CheckHoleContact(int hitID)
+        private void CheckHoleContact(int hitID, int objID)
         {
             if (hitID == _ballModel.BallID)
             {
@@ -83,7 +82,7 @@ namespace Code.Controllers
 
         public void Cleanup()
         {
-            _contacts.IsStayContact -= CheckHoleContact;
+            _contacts.IsContact -= CheckHoleContact;
             _ballEvents.OnBallKicked -= OnBallKickedChange;
         }
     }

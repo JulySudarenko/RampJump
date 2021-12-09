@@ -18,7 +18,9 @@
             <e p="ArrowController.cs" t="Include" />
             <e p="BallFallingHandler.cs" t="Include" />
             <e p="BallTouchHandlingController.cs" t="Include" />
+            <e p="CoinsController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
+            <e p="EffectController.cs" t="Include" />
             <e p="GameplayController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
@@ -36,8 +38,8 @@
           <e p="LevelConstructor" t="Include">
             <e p="ActiveObjectsConfigParser.cs" t="Include" />
             <e p="ILevel.cs" t="Include" />
-            <e p="LevelDetail.cs" t="Include" />
-            <e p="LevelDetailsList.cs" t="Include" />
+            <e p="LevelComponent.cs" t="Include" />
+            <e p="LevelComponentsList.cs" t="Include" />
             <e p="LevelObjectsConfigParser.cs" t="Include" />
           </e>
           <e p="Models" t="Include">

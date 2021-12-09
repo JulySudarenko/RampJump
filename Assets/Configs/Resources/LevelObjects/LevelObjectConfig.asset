@@ -12,9 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
   m_Name: LevelObjectConfig
   m_EditorClassIdentifier: 
-  LevelDetailsPrefabs: []
-  BottomPrefab: {fileID: 0}
-  BallStartPlace: {fileID: 0}
-  BallStartPosition: {fileID: 0}
-  HoleStartPosition: {fileID: 0}
-  _levelNumber: 0
+  LevelDetailsPrefabs:
+  - {fileID: 7131853952572676564, guid: 081c838f4a582c64890b23a9999e7dd7, type: 3}
+  - {fileID: 3888791477102682287, guid: 77380e0adcaea0f49afe51eb136c00f5, type: 3}
+  - {fileID: 8380233989837926427, guid: 4d1ee2b9035a5b04cb2612ee23549db0, type: 3}
+  CoinsPlaces:
+  - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
+  BottomPrefab: {fileID: 397837023031585176, guid: d1a03739c3d703445b76d1e57431db8d,
+    type: 3}
+  CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
+    type: 3}
+  BallStartPlace: {fileID: 1554073518291111624, guid: 020da7d4dbc866e4f87b06bbdfa0ec4d,
+    type: 3}
+  BallStartPosition: {fileID: 3182337993162572979, guid: 088fb825b03d9f54abe366e315fb6284,
+    type: 3}
+  HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
+    type: 3}
+  _levelNumber: 4

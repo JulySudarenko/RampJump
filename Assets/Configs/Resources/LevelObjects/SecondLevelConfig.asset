@@ -16,7 +16,11 @@ MonoBehaviour:
   - {fileID: 6575456670583513635, guid: 8604d5c8a3bbc4c4498afa434495c9f3, type: 3}
   - {fileID: 9210720411267899274, guid: c76015fc494a2534681ec985a3a119c1, type: 3}
   - {fileID: 7598062404183423863, guid: 4086b5549a77bd541879251992bd983f, type: 3}
-  BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
+  CoinsPlaces:
+  - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
+  BottomPrefab: {fileID: 397837023031585176, guid: d1a03739c3d703445b76d1e57431db8d,
+    type: 3}
+  CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
     type: 3}
   BallStartPlace: {fileID: 3518646691492225902, guid: 9947563535b3adb49b344cd45853def5,
     type: 3}

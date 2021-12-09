@@ -14,9 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelDetailsPrefabs:
   - {fileID: 1235543319778305892, guid: 83962a0e50a59ef4cb98431396dbd17c, type: 3}
-  - {fileID: 2710110262407017292, guid: 175793ccd905d374fa9565adf9dbbd58, type: 3}
-  - {fileID: 3016781118219069092, guid: 6520397edc66079449af1a2ce9062ee5, type: 3}
-  BottomPrefab: {fileID: 1758423383194136185, guid: 77eee7b535147b944b52cf7b2d86cafa,
+  - {fileID: 7162886924008423983, guid: 4fdc531f15bfc5e40b51184db22e69f7, type: 3}
+  - {fileID: 1386279142486951075, guid: 20b8b881272e6e245955974de2bb6f9a, type: 3}
+  CoinsPlaces:
+  - {fileID: 2561835168777433298, guid: befbb8cedb5143946b92fc11c05f6256, type: 3}
+  - {fileID: 2173128313600623136, guid: 152d82eb4325cb844bf9e28c11deab4e, type: 3}
+  - {fileID: 6391699195644083582, guid: d571cc9c49db1af4aab12d92ed2c07a4, type: 3}
+  - {fileID: 6142228689803773652, guid: de78034b2168aec43be395b995d3a575, type: 3}
+  - {fileID: 6297421659196641628, guid: 2f9005fdc6b04b945acae8b9a81845dc, type: 3}
+  - {fileID: 2465582686408318096, guid: 1de1e7203a9e34640ad69d6aee3d8340, type: 3}
+  - {fileID: 5702113570324050490, guid: fb750711a91d7de4da385d20fc3d4d82, type: 3}
+  - {fileID: 5933480792032786371, guid: b50c48c76678f61469c08a80b16d51d8, type: 3}
+  - {fileID: 5143805046641046835, guid: b4e9c200fd0dc984c816ddd2478ce089, type: 3}
+  - {fileID: 5208608604992853454, guid: 01d3e407949714441bedfa00c55a0ddb, type: 3}
+  BottomPrefab: {fileID: 397837023031585176, guid: d1a03739c3d703445b76d1e57431db8d,
+    type: 3}
+  CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
     type: 3}
   BallStartPlace: {fileID: 1554073518291111624, guid: 020da7d4dbc866e4f87b06bbdfa0ec4d,
     type: 3}
@@ -24,4 +37,4 @@ MonoBehaviour:
     type: 3}
   HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
     type: 3}
-  _levelNumber: 3
+  _levelNumber: 1

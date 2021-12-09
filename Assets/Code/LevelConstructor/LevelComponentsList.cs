@@ -3,32 +3,32 @@ using System.Collections;
 
 namespace Code.LevelConstructor
 {
-    internal sealed class LevelDetailsList : IEnumerator, IEnumerable
+    internal sealed class LevelComponentsList : IEnumerator, IEnumerable
     {
-        private LevelDetail[] _levelDetails;
-        private LevelDetail _current;
+        private LevelComponent[] _levelDetails;
+        private LevelComponent _current;
         private int _index = -1;
 
-        public LevelDetailsList()
+        public LevelComponentsList()
         {
-            _levelDetails = new LevelDetail[0];
+            _levelDetails = new LevelComponent[0];
         }
         
         public int Count => _levelDetails.Length;
 
-        public void AddLevelDetail(LevelDetail levelDetail)
+        public void AddLevelDetail(LevelComponent levelComponent)
         {
             if (_levelDetails == null)
             {
-                _levelDetails = new[] {levelDetail};
+                _levelDetails = new[] {levelComponent};
                 return;
             }
 
             Array.Resize(ref _levelDetails, Count + 1);
-            _levelDetails[Count - 1] = levelDetail;
+            _levelDetails[Count - 1] = levelComponent;
         }
 
-        public LevelDetail this[int index]
+        public LevelComponent this[int index]
         {
             get => _levelDetails[index];
             set => _levelDetails[index] = value;

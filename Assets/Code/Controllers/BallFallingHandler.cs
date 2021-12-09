@@ -10,10 +10,11 @@ namespace Code.Controllers
         private readonly IBallModel _ballModel;
         private readonly Hit _hit;
 
-        public BallFallingHandler(Transform bottom, IBallModel ball)
+        public BallFallingHandler(Component bottom, IBallModel ball)
         {
             _ballModel = ball;
-            _hit = HelperExtentions.GetOrAddComponent<Hit>(bottom.gameObject);
+            var colliderChild = bottom.GetComponentInChildren<Collider>();
+            _hit = colliderChild.gameObject.GetOrAddComponent<Hit>();
         }
 
         public void Init()
@@ -21,12 +22,12 @@ namespace Code.Controllers
             _hit.OnHit += OnBottomHit;
         }
 
-        private void OnBottomHit(int colliderID)
+        private void OnBottomHit(int collisionID, int objID)
         {
-            if (colliderID == _ballModel.Ball.gameObject.GetInstanceID())
+            if (collisionID == _ballModel.Ball.gameObject.GetInstanceID())
             {
-                _ballModel.BallRigidbody.velocity = Vector3.zero;
-                _ballModel.BallRigidbody.angularVelocity = Vector3.zero;
+                _ballModel.BallRigidbody.velocity = _ballModel.BallRigidbody.velocity / 2;
+                _ballModel.BallRigidbody.angularVelocity = _ballModel.BallRigidbody.angularVelocity / 2;
             }
         }
 
