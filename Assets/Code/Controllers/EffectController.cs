@@ -17,15 +17,14 @@ namespace Code.Controllers
             _particle = particle;
             _particle.gameObject.SetActive(false);
         }
-
-
+        
         public void Initialize()
         {
             var colliderChild = _ball.GetComponentInChildren<SphereCollider>();
             _hit = colliderChild.gameObject.GetOrAddComponent<Hit>();
 
-            _hit.OnSlime += ActivateEffect;
-            //_hit.OnSlime += DeactivateEffect;
+            _hit.OnHitStay += ActivateEffect;
+            _hit.OnHitEnd += DeactivateEffect;
         }
 
         private void ActivateEffect(Vector3 vector)
@@ -35,16 +34,16 @@ namespace Code.Controllers
             Debug.Log("Collision");
         }
 
-        // private void DeactivateEffect(Vector3 vector)
-        // {
-        //     _particle.gameObject.SetActive(false);
-        //     Debug.Log("Collision Finish");
-        // }
+        private void DeactivateEffect(int value, int val)
+        {
+            _particle.gameObject.SetActive(false);
+            Debug.Log("Collision Finish");
+        }
 
         public void Cleanup()
         {
-            _hit.OnSlime -= ActivateEffect;
-            //_hit.OnHitFinish -= DeactivateEffect;
+            _hit.OnHitStay -= ActivateEffect;
+            _hit.OnHitEnd -= DeactivateEffect;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Code.Configs;
+﻿using System;
+using Code.Configs;
+using Code.GameState;
 using Code.Interfaces;
 using Code.LevelConstructor;
 using Code.Models;
@@ -7,24 +9,22 @@ using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal class LevelController : IInitialize, ICleanup
+    internal class LevelController : IInitialize, ICleanup, IState
     {
+        public event Action<State> OnChangeState;
         public LevelComponentsList CoinsList { get; }
-        private readonly IFinishEvents _finishEvents;
-        private readonly IBallEvents _ballEvents;
-        private readonly BallFallingHandler _ballFallingHandler;
-        private readonly EndGameView _endGameView;
-        private readonly ILevel _configParser;
+
         private readonly IBallModel _ball;
+        private readonly BallLandingController _ballLandingController;
+        private readonly EndGameView _endGameView;
+        private readonly LevelObjectsConfigParser _configParser;
         private readonly Transform _hole;
         private readonly Transform _arrow;
         private int _levelCounter = 1;
 
-        public LevelController(IFinishEvents finishEvents, IBallEvents ballEvents, EndGameView endGameView,
+        public LevelController(EndGameView endGameView,
             LevelObjectConfig[] config, IBallModel ball, Transform hole, Transform arrow)
         {
-            _finishEvents = finishEvents;
-            _ballEvents = ballEvents;
             _endGameView = endGameView;
             _ball = ball;
             _hole = hole;
@@ -32,7 +32,7 @@ namespace Code.Controllers
             _endGameView.NextLevelButton.onClick.AddListener(_endGameView.Restart);
             _endGameView.RestartLevelButton.onClick.AddListener(_endGameView.Restart);
             _configParser = new LevelObjectsConfigParser(config);
-            _ballFallingHandler = new BallFallingHandler(_configParser.Bottom, ball);
+            _ballLandingController = new BallLandingController(_configParser.Bottom, ball);
             CoinsList = _configParser.CoinsList;
         }
 
@@ -41,15 +41,32 @@ namespace Code.Controllers
             _endGameView.Restart();
             _configParser.InitNewLevel(_levelCounter);
             UpdateStartPositions();
-            _finishEvents.OnDefeat += PlayDefeatVariant;
-            _finishEvents.OnVictory += PlayVictoryVariant;
-            _ballEvents.OnBallKicked += OnBallKickedChange;
-            _ballFallingHandler.Init();
+            _ballLandingController.Init();
         }
 
-        private void OnBallKickedChange(bool value)
+        public void ChangeState(State state)
         {
-            _configParser.BallStartPlace.gameObject.SetActive(false);
+            switch (state)
+            {
+                case State.Start:
+                    UpdateStartPositions();
+                    break;
+                case State.BallTouched:
+                    break;
+                case State.BallKicked:
+                    _configParser.BallStartPlace.gameObject.SetActive(false);
+                    break;
+                case State.Victory:
+                    PlayVictoryVariant();
+                    UpdateStartPositions();
+                    break;
+                case State.Defeat:
+                    PlayDefeatVariant();
+                    UpdateStartPositions();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
+            }
         }
 
         private void PlayVictoryVariant()
@@ -62,15 +79,14 @@ namespace Code.Controllers
 
             _endGameView.ShowWinPanel();
             _configParser.InitNewLevel(_levelCounter);
-
-            UpdateStartPositions();
+            OnChangeState?.Invoke(State.Start);
         }
 
         private void PlayDefeatVariant()
         {
             _endGameView.ShowLosePanel();
 
-            UpdateStartPositions();
+            OnChangeState?.Invoke(State.Start);
         }
 
         private void UpdateStartPositions()
@@ -81,14 +97,15 @@ namespace Code.Controllers
             _ball.BallRigidbody.angularVelocity = Vector3.zero;
             _arrow.position = _configParser.BallStartPosition;
             _hole.position = _configParser.HoleStartPosition;
+
+            _configParser.ReloadCoins(_levelCounter);
         }
 
         public void Cleanup()
         {
-            _finishEvents.OnDefeat -= PlayDefeatVariant;
-            _finishEvents.OnVictory -= PlayVictoryVariant;
-            _ballEvents.OnBallKicked -= OnBallKickedChange;
-            _ballFallingHandler.Cleanup();
+            _ballLandingController.Cleanup();
+            _endGameView.NextLevelButton.onClick.RemoveAllListeners();
+            _endGameView.RestartLevelButton.onClick.RemoveAllListeners();
         }
     }
 }

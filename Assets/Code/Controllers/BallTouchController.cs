@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.GameState;
 using Code.Interfaces;
 using Code.Models;
 using Code.UserInput;
@@ -6,10 +7,9 @@ using UnityEngine;
 
 namespace Code.Controllers
 {
-    public class BallTouchHandlingController : IInitialize, IExecute, ICleanup, IBallEvents
+    public class BallTouchController : IInitialize, IExecute, ICleanup, IState
     {
-        public event Action<bool> OnBallTouched;
-        public event Action<bool> OnBallKicked;
+        public event Action<State> OnChangeState;
 
         private const float HIT_DISTANCE = 100.0f;
         private const float MAX_FORCE = 3200.0f;
@@ -30,7 +30,7 @@ namespace Code.Controllers
         private bool _isMouseButtonUp;
         private bool _isMouseButton;
 
-        public BallTouchHandlingController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
+        public BallTouchController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
             IUserInput userInput)
         {
             _ballModel = ballModel;
@@ -73,6 +73,8 @@ namespace Code.Controllers
                     KickTheBall();
                 }
             }
+
+            Debug.Log(_ballModel.Ball.position);
         }
 
         private void CheckTouch()
@@ -84,7 +86,7 @@ namespace Code.Controllers
                 if (_hit.collider.gameObject.GetInstanceID() == _ballModel.BallID)
                 {
                     _isBallTouched = true;
-                    OnBallTouched?.Invoke(true);
+                    OnChangeState?.Invoke(State.BallTouched);
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
                         _ballModel.Ball.position.z);
                     _ballChangeColorSpeed = 0.0f;
@@ -108,8 +110,7 @@ namespace Code.Controllers
                 new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
             _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
             _isBallTouched = false;
-            OnBallTouched?.Invoke(false);
-            OnBallKicked?.Invoke(true);
+            OnChangeState?.Invoke(State.BallKicked);
             _ballModel.BallRenderer.material.color = _colorStart;
         }
 
@@ -119,6 +120,14 @@ namespace Code.Controllers
             _userInput.OnTouchUp -= OnMouseButtonUp;
             _userInput.OnTouch -= OnMouseButton;
             _userInput.OnChangeMousePosition -= GetMousePosition;
+        }
+
+        public void ChangeState(State state)
+        {
+            if (state == State.Start)
+            {
+                
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using Code.Assistant;
 using Code.Interfaces;
 using Code.LevelConstructor;
 using Code.UniversalFactory;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Controllers
@@ -32,6 +33,19 @@ namespace Code.Controllers
             {
                 _coinsHits[i].IsContact += TakeCoin;
             }
+
+            TwistCoins();
+        }
+
+        private void TwistCoins()
+        {
+            for (int i = 0; i < _coins.Count; i++)
+            {
+                Sequence sequence = DOTween.Sequence();
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 90.0f), 5.0f, RotateMode.Fast));
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 180.0f), 5.0f, RotateMode.Fast));
+                sequence.SetLoops(-1, LoopType.Yoyo);
+            }
         }
 
         private void TakeCoin(int ball, int coin)
@@ -42,8 +56,6 @@ namespace Code.Controllers
                 {
                     _coins[i].Detail.gameObject.SetActive(false);
                 }
-
-                Debug.Log($"Coin controller {coin}, {_coins[i].Number}");
             }
         }
 
@@ -52,6 +64,11 @@ namespace Code.Controllers
             for (int i = 0; i < _coinsHits.Length; i++)
             {
                 _coinsHits[i].IsContact -= TakeCoin;
+            }
+
+            for (int i = 0; i < _coins.Count; i++)
+            {
+                _coins[i].Detail.DOKill();
             }
         }
     }

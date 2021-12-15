@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace Code.LevelConstructor
 {
-    internal class LevelObjectsConfigParser : ILevel
+    internal class LevelObjectsConfigParser
     {
-        public LevelComponentsList CoinsList { get; private set; }
+        public LevelComponentsList CoinsList { get; }
         public Transform Bottom { get; private set; }
         public Transform BallStartPlace { get; private set; }
         public Vector3 BallStartPosition { get; private set; }
@@ -31,9 +31,10 @@ namespace Code.LevelConstructor
 
         private void Init()
         {
-            Bottom = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BottomPrefab, _components)).Create();
-            BallStartPlace = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BallStartPlace, _components))
-                .Create();
+            Bottom = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BottomPrefab)).Create();
+            Bottom.SetParent(_components);
+            BallStartPlace = new ObjectInitialization(new Factory(_levelObjectConfigs[0].BallStartPlace)).Create();
+            BallStartPlace.SetParent(_components);
             for (int i = 0; i < _levelObjectConfigs.Length; i++)
             {
                 InitDetails(_levelObjectConfigs[i]);
@@ -46,7 +47,8 @@ namespace Code.LevelConstructor
             for (int j = 0; j < levelDetail.LevelDetailsPrefabs.Count; j++)
             {
                 var obj = new ObjectInitialization(
-                    new Factory(levelDetail.LevelDetailsPrefabs[j], _components)).Create();
+                    new Factory(levelDetail.LevelDetailsPrefabs[j])).Create();
+                obj.SetParent(_components);
                 obj.gameObject.SetActive(false);
                 _levelComponents.AddLevelDetail(new LevelComponent(obj.transform, levelDetail.LevelNumber));
             }
@@ -60,7 +62,8 @@ namespace Code.LevelConstructor
                 coin.transform.position = levelDetail.CoinsPlaces[j].position;
 
                 var newCoin = new ObjectInitialization(
-                    new Factory(coin, _coins)).Create();
+                    new Factory(coin)).Create();
+                newCoin.SetParent(_coins);
                 newCoin.gameObject.SetActive(false);
                 _levelComponents.AddLevelDetail(new LevelComponent(newCoin.transform,
                     levelDetail.LevelNumber));
@@ -73,8 +76,7 @@ namespace Code.LevelConstructor
 
         public void InitNewLevel(int levelNumber)
         {
-            RestartLevel(levelNumber);
-
+            StartLevel(levelNumber);
 
             for (int i = 0; i < _levelObjectConfigs.Length; i++)
             {
@@ -87,7 +89,7 @@ namespace Code.LevelConstructor
             }
         }
 
-        private void RestartLevel(int levelNumber)
+        private void StartLevel(int levelNumber)
         {
             for (int i = 0; i < _levelComponents.Count; i++)
             {
@@ -100,6 +102,11 @@ namespace Code.LevelConstructor
                     _levelComponents[i].Detail.gameObject.SetActive(false);
                 }
             }
+        }
+
+        public void ReloadCoins(int levelNumber)
+        {
+            StartLevel(levelNumber);
         }
     }
 }

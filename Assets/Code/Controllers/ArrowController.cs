@@ -1,13 +1,20 @@
-﻿using Code.Interfaces;
+﻿using System;
+using Code.GameState;
+using Code.Interfaces;
+using Code.LevelConstructor;
+using Code.Models;
+using Code.UniversalFactory;
 using Code.UserInput;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal sealed class ArrowController : IInitialize, IExecute, ICleanup
+    internal sealed class ArrowController : IInitialize, IExecute, ICleanup, IState
     {
+        public event Action<State> OnChangeState;
         private readonly IUserInput _userInput;
-        private readonly IBallEvents _ballEvents;
+        private readonly StateController _state;
         private readonly Transform _arrow;
         private readonly Transform _ball;
         private Vector3 _mousePosition;
@@ -20,28 +27,35 @@ namespace Code.Controllers
         private bool _isBallTouched;
         private bool _isMouseButtonDown;
 
-        public ArrowController(IBallEvents ballEvents, Transform arrow, IUserInput input, Transform ball)
+        public ArrowController(Transform arrow, IUserInput input, Transform ball)
         {
             _arrow = arrow;
             _ball = ball;
-            _ballEvents = ballEvents;
             _userInput = input;
         }
 
         public void Initialize()
         {
-            _ballEvents.OnBallTouched += IsBallTouched;
             _userInput.OnTouch += OnMouseButton;
             _userInput.OnTouchDown += OnMouseButtonDown;
             _userInput.OnChangeMousePosition += GetMousePosition;
             _arrow.gameObject.SetActive(false);
         }
 
-        private void IsBallTouched(bool value)
+        public void ChangeState(State state)
         {
-            _isBallTouched = value;
-            _arrow.gameObject.SetActive(value);
-            _arrow.position = _ball.position;
+            if (state == State.BallTouched)
+            {
+                _isBallTouched = true;
+                _arrow.gameObject.SetActive(true);
+                _arrow.position = _ball.position;
+                OnChangeState?.Invoke(state);
+            }
+            else
+            {
+                _isBallTouched = false;
+                _arrow.gameObject.SetActive(false);
+            }
         }
 
         private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;
@@ -72,10 +86,41 @@ namespace Code.Controllers
 
         public void Cleanup()
         {
-            _ballEvents.OnBallTouched -= IsBallTouched;
             _userInput.OnChangeMousePosition -= GetMousePosition;
             _userInput.OnTouchDown -= OnMouseButtonDown;
             _userInput.OnTouch -= OnMouseButton;
+        }
+    }
+
+    internal class BallSoundController : IState
+    {
+        public event Action<State> OnChangeState;
+
+        private LevelComponentsList _componentsList;
+        private State _state;
+        private AudioListener _listener;
+        private AudioSource _source;
+        private Hit _hitBall;
+
+        public BallSoundController(IBallModel ballModel)
+        {
+        }
+
+        public void ChangeState(State state) => _state = state;
+
+        private void OnBallSlime()
+        {
+        }
+
+        private void PlaySlimeSound()
+        {
+            //_source.clip = ;
+            _source.Play();
+        }
+
+        private void StopSound()
+        {
+            _source.Stop();
         }
     }
 }

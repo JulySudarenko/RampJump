@@ -12,13 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
   m_Name: LevelObjectConfig
   m_EditorClassIdentifier: 
-  LevelDetailsPrefabs:
-  - {fileID: 7131853952572676564, guid: 081c838f4a582c64890b23a9999e7dd7, type: 3}
-  - {fileID: 3888791477102682287, guid: 77380e0adcaea0f49afe51eb136c00f5, type: 3}
-  - {fileID: 8380233989837926427, guid: 4d1ee2b9035a5b04cb2612ee23549db0, type: 3}
+  LevelDetailsPrefabs: []
   CoinsPlaces:
   - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
-  BottomPrefab: {fileID: 397837023031585176, guid: d1a03739c3d703445b76d1e57431db8d,
+  BottomPrefab: {fileID: 2493657857866858101, guid: 4145b3ce732384c4ba720751c053402b,
     type: 3}
   CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
     type: 3}

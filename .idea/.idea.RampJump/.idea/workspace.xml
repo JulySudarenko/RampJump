@@ -22,35 +22,35 @@
     <list default="true" id="316a0b96-01d5-4d50-b4ac-30d7036bf89f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetail.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetailsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponentsList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelDetailsList.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponentsList.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UniversalFactory/Factory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UniversalFactory/Factory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UniversalFactory/TriggerContacts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UniversalFactory/TriggerContacts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/LevelObjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/LevelObjectConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/SecondLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/SecondLevelConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/ThirdLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/ThirdLevelConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/HoleMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/HoleMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/SmallRamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/SmallRamp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom(Clone).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectsData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Factory/ActiveObjectInitialization.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Factory/ObjectInitialization.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IStartPositions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Factory/Factory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Factory/ConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/IFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IActiveObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/ConfigParser.cs" />
@@ -89,8 +83,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/ActiveObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/LoseGameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/WinGameView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/LevelObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/StopGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/MouseTestClicksHandler.cs" />
@@ -103,24 +95,32 @@
         <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponentsList.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/TriggerContacts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/LevelObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/EndGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameState/State.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameState/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/GameState/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Factory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ILevel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Factory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallFallingHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/TriggerContacts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
       </list>
     </option>
   </component>
@@ -137,6 +137,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -149,10 +150,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21340">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21340" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -190,83 +191,103 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="511" height="464" key="DebuggerActiveHint" timestamp="1638958305472">
+    <state width="511" height="464" key="DebuggerActiveHint" timestamp="1639463332227">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="511" height="464" key="DebuggerActiveHint/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638958305472" />
-    <state width="1493" height="279" key="GridCell.Tab.0.bottom" timestamp="1638963462027">
+    <state width="511" height="464" key="DebuggerActiveHint/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639463332227" />
+    <state width="1493" height="278" key="GridCell.Tab.0.bottom" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462027" />
-    <state width="1493" height="279" key="GridCell.Tab.0.center" timestamp="1638963462027">
+    <state width="1877" height="365" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.0.center" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462027" />
-    <state width="1493" height="279" key="GridCell.Tab.0.left" timestamp="1638963462027">
+    <state width="1877" height="365" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
+    <state width="1493" height="278" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.0.left" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462027" />
-    <state width="1493" height="279" key="GridCell.Tab.0.right" timestamp="1638963462027">
+    <state width="1877" height="365" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
+    <state width="1493" height="278" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.0.right" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462027" />
-    <state width="1493" height="279" key="GridCell.Tab.1.bottom" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
+    <state width="1493" height="278" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.1.bottom" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.1.center" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.1.center" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.1.left" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.1.left" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.1.right" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.1.right" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.2.bottom" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.2.bottom" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.2.center" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state width="1493" height="278" key="GridCell.Tab.2.center" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.2.left" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.2.left" timestamp="1639477691340">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.2.right" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691340" />
+    <state width="1493" height="278" key="GridCell.Tab.2.right" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.3.bottom" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state width="1493" height="278" key="GridCell.Tab.3.bottom" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.3.center" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state width="1493" height="278" key="GridCell.Tab.3.center" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.3.left" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state width="1493" height="278" key="GridCell.Tab.3.left" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state width="1493" height="279" key="GridCell.Tab.3.right" timestamp="1638963462028">
+    <state width="1877" height="365" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state width="1493" height="278" key="GridCell.Tab.3.right" timestamp="1639477691341">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="1493" height="279" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638963462028" />
-    <state x="720" y="143" key="RiderGenerateDialog" timestamp="1638912291974">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="365" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
+    <state width="1493" height="278" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477691341" />
+    <state x="2496" y="-40" key="RiderGenerateDialog" timestamp="1639477429955">
+      <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state x="720" y="143" key="RiderGenerateDialog/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1638912291974" />
-    <state x="2496" y="-40" key="RiderGenerateDialog/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1638889740141" />
+    <state x="2496" y="-40" key="RiderGenerateDialog/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639477429955" />
     <state x="2013" y="-61" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1637734095466">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state x="2013" y="-61" width="1350" height="638" key="VCS.FileHistoryDialog/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1637734095466" />
+    <state x="2345" y="110" key="run.anything.popup" timestamp="1639294549618">
+      <screen x="1920" y="-154" width="1536" height="832" />
+    </state>
+    <state x="2345" y="110" key="run.anything.popup/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639294549618" />
     <state x="2351" y="-1" width="672" height="678" key="search.everywhere.popup" timestamp="1637403050853">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
@@ -276,30 +297,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs</url>
-          <line>32</line>
-          <properties documentPath="D:\geekbrains.ru\Projects\Unity\RampJump\Assets\Code\Controllers\EffectController.cs" initialLine="32">
+          <url>file://$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs</url>
+          <line>29</line>
+          <properties documentPath="D:\geekbrains.ru\Projects\Unity\RampJump\Assets\Code\Controllers\BallLandingController.cs" initialLine="29">
             <startOffsets>
-              <option value="876" />
+              <option value="805" />
             </startOffsets>
             <endOffsets>
-              <option value="914" />
+              <option value="879" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Code/Controllers/BallTouchHandlingController.cs</url>
-          <line>48</line>
-          <properties documentPath="D:\geekbrains.ru\Projects\Unity\RampJump\Assets\Code\Controllers\BallTouchHandlingController.cs" initialLine="48">
+          <url>file://$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs</url>
+          <line>27</line>
+          <properties documentPath="D:\geekbrains.ru\Projects\Unity\RampJump\Assets\Code\Controllers\RootController.cs" initialLine="27">
             <startOffsets>
-              <option value="1691" />
+              <option value="983" />
             </startOffsets>
             <endOffsets>
-              <option value="1744" />
+              <option value="1132" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

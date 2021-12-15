@@ -1,16 +1,17 @@
 ﻿using Code.Assistant;
+using Code.Interfaces;
 using Code.Models;
 using Code.UniversalFactory;
 using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal class BallFallingHandler
+    internal class BallLandingController
     {
         private readonly IBallModel _ballModel;
         private readonly Hit _hit;
 
-        public BallFallingHandler(Component bottom, IBallModel ball)
+        public BallLandingController(Component bottom, IBallModel ball)
         {
             _ballModel = ball;
             var colliderChild = bottom.GetComponentInChildren<Collider>();
