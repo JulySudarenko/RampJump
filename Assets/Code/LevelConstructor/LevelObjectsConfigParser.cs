@@ -8,6 +8,7 @@ namespace Code.LevelConstructor
     internal class LevelObjectsConfigParser
     {
         public LevelComponentsList CoinsList { get; }
+        public LevelComponentsList ComponentsList { get; }
         public Transform Bottom { get; private set; }
         public Transform BallStartPlace { get; private set; }
         public Vector3 BallStartPosition { get; private set; }
@@ -23,6 +24,7 @@ namespace Code.LevelConstructor
             _levelObjectConfigs = data;
             _levelComponents = new LevelComponentsList();
             CoinsList = new LevelComponentsList();
+            ComponentsList = new LevelComponentsList();
             _components = new GameObject("Components").transform;
             _coins = new GameObject("Coins").transform;
             TotalLevels = data.Length;
@@ -51,6 +53,9 @@ namespace Code.LevelConstructor
                 obj.SetParent(_components);
                 obj.gameObject.SetActive(false);
                 _levelComponents.AddLevelDetail(new LevelComponent(obj.transform, levelDetail.LevelNumber));
+
+                var newDetailCollider = obj.GetComponentInChildren<Collider>();
+                ComponentsList.AddLevelDetail(new LevelComponent(obj.transform, newDetailCollider.gameObject.GetInstanceID()));
             }
         }
 

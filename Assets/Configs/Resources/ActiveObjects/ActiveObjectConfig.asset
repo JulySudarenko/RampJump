@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 5328258765714074911, guid: 6c0fdc59f667cc34f8b23e9a6fe01e4e,
     type: 3}
-  ArrowPrefab: {fileID: 731304322884785928, guid: 91dd5d16a2403d842906b4a73bb6a2ca,
+  ArrowPrefab: {fileID: 1052474701701991556, guid: fdc129ead126d064981c524e4ccbbc61,
     type: 3}
   HolePrefab: {fileID: 1360256838282906327, guid: dfbdb70fcbee47a4ca43cc28673c9f0d,
     type: 3}
+  SlimeSound: {fileID: 8300000, guid: 38ef96bb3e671df4096d86fd37375484, type: 3}
+  CoinSound: {fileID: 8300000, guid: dbc3ffa7bb1653c49ac49f878132d71b, type: 3}
   _force: 500
   _forceRiseFactor: 300
   _colorRiseFactor: 10

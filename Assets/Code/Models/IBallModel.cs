@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Code.UniversalFactory;
+using UnityEngine;
 
 namespace Code.Models
 {
@@ -6,8 +7,9 @@ namespace Code.Models
     {
         Transform Ball { get; }
         Rigidbody BallRigidbody { get; }
-        SphereCollider BallCollider { get; }
+        Hit BallHit { get; }
         Renderer BallRenderer { get; }
+        AudioSource AudioSource { get; }
         int BallID { get; }
     }
 }

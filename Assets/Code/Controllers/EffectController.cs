@@ -23,7 +23,7 @@ namespace Code.Controllers
             var colliderChild = _ball.GetComponentInChildren<SphereCollider>();
             _hit = colliderChild.gameObject.GetOrAddComponent<Hit>();
 
-            _hit.OnHitStay += ActivateEffect;
+            //_hit.OnHitStay += ActivateEffect;
             _hit.OnHitEnd += DeactivateEffect;
         }
 
@@ -42,7 +42,7 @@ namespace Code.Controllers
 
         public void Cleanup()
         {
-            _hit.OnHitStay -= ActivateEffect;
+            //_hit.OnHitStay -= ActivateEffect;
             _hit.OnHitEnd -= DeactivateEffect;
         }
     }

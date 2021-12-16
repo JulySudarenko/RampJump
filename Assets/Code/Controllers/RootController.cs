@@ -11,6 +11,7 @@ namespace Code.Controllers
     {
         [SerializeField] private Data _data;
         [SerializeField] private EndGameView _endGameView;
+        [SerializeField] private AudioSource _rampSource;
         [SerializeField] private Transform _particle;
         private Controllers _controllers;
 
@@ -30,7 +31,11 @@ namespace Code.Controllers
             var levelController = new LevelController(_endGameView, _data.LevelObjectConfig, configParser.BallModel,
                 configParser.HoleObject, configParser.ArrowObject);
             var effectController = new EffectController(configParser.BallModel.Ball, _particle);
-            var coins = new CoinsController(levelController.CoinsList);
+
+            var coins = new CoinsController(levelController.CoinsList, configParser.BallModel.AudioSource,
+                configParser.CoinSound);
+            var slimeCheckout = new SlimeCheckout(levelController.ComponentsList, _rampSource,
+                configParser.BallSlimeSound, configParser.BallModel.BallHit);
 
             var gameStateController = new StateController(ballTouchHandlingController, arrowController,
                 gameplayController, levelController);
@@ -43,6 +48,7 @@ namespace Code.Controllers
             _controllers.Add(levelController);
             //_controllers.Add(effectController);
             _controllers.Add(coins);
+            _controllers.Add(slimeCheckout);
             _controllers.Add(gameStateController);
             _controllers.Initialize();
         }

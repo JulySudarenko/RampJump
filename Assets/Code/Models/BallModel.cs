@@ -1,4 +1,5 @@
-﻿using Code.Configs;
+﻿using Code.Assistant;
+using Code.Configs;
 using Code.UniversalFactory;
 using UnityEngine;
 
@@ -9,17 +10,19 @@ namespace Code.Models
         public Transform Ball { get; }
         public Rigidbody BallRigidbody { get; }
         public Renderer BallRenderer { get; }
-        public SphereCollider BallCollider { get; }
+        public Hit BallHit { get; }
+        public AudioSource AudioSource { get; }
         public int BallID { get; }
 
         public BallModel(ActiveObjectConfig config)
         {
             Ball = new ObjectInitialization(new Factory(config.BallPrefab)).Create();
             BallRigidbody = Ball.GetComponentInChildren<Rigidbody>();
-            BallCollider = Ball.GetComponentInChildren<SphereCollider>();
             BallRenderer = Ball.GetComponentInChildren<Renderer>();
-            BallID = BallCollider.gameObject.GetInstanceID();
-            
+            AudioSource = Ball.gameObject.GetOrAddComponent<AudioSource>();
+            var ballCollider = Ball.GetComponentInChildren<SphereCollider>();
+            BallHit = ballCollider.gameObject.GetOrAddComponent<Hit>();
+            BallID = ballCollider.gameObject.GetInstanceID();
         }
     }
 }

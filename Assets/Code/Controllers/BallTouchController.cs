@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Audio;
 using Code.GameState;
 using Code.Interfaces;
 using Code.Models;
@@ -17,6 +18,8 @@ namespace Code.Controllers
         private readonly IBallForceModel _ballForceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
+        private AudioPlayer _audioPlayer;
+        private State _state;
         private Ray _ray;
         private RaycastHit _hit;
         private Color _colorStart;
@@ -25,7 +28,6 @@ namespace Code.Controllers
         private Vector3 _mousePosition;
         private float _force;
         private float _ballChangeColorSpeed;
-        private bool _isBallTouched;
         private bool _isMouseButtonDown;
         private bool _isMouseButtonUp;
         private bool _isMouseButton;
@@ -41,7 +43,6 @@ namespace Code.Controllers
 
         public void Initialize()
         {
-            _isBallTouched = false;
             _userInput.OnTouchDown += OnMouseButtonDown;
             _userInput.OnTouchUp += OnMouseButtonUp;
             _userInput.OnTouch += OnMouseButton;
@@ -56,12 +57,12 @@ namespace Code.Controllers
 
         public void Execute(float deltaTime)
         {
-            if (_isMouseButtonDown)
+            if (_isMouseButtonDown && _state == State.Start)
             {
                 CheckTouch();
             }
 
-            if (_isBallTouched)
+            if (_state == State.BallTouched)
             {
                 if (_isMouseButton)
                 {
@@ -73,8 +74,6 @@ namespace Code.Controllers
                     KickTheBall();
                 }
             }
-
-            Debug.Log(_ballModel.Ball.position);
         }
 
         private void CheckTouch()
@@ -85,7 +84,6 @@ namespace Code.Controllers
             {
                 if (_hit.collider.gameObject.GetInstanceID() == _ballModel.BallID)
                 {
-                    _isBallTouched = true;
                     OnChangeState?.Invoke(State.BallTouched);
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
                         _ballModel.Ball.position.z);
@@ -109,7 +107,6 @@ namespace Code.Controllers
             _touchDirection =
                 new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
             _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
-            _isBallTouched = false;
             OnChangeState?.Invoke(State.BallKicked);
             _ballModel.BallRenderer.material.color = _colorStart;
         }
@@ -122,12 +119,6 @@ namespace Code.Controllers
             _userInput.OnChangeMousePosition -= GetMousePosition;
         }
 
-        public void ChangeState(State state)
-        {
-            if (state == State.Start)
-            {
-                
-            }
-        }
+        public void ChangeState(State state) => _state = state;
     }
 }

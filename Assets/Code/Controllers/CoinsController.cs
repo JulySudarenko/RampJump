@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Code.Assistant;
+using Code.Audio;
 using Code.Interfaces;
 using Code.LevelConstructor;
 using Code.UniversalFactory;
@@ -12,11 +13,13 @@ namespace Code.Controllers
     {
         private readonly LevelComponentsList _coins;
         private TriggerContacts[] _coinsHits;
+        private ISoundPlayer _soundPlayer;
         private int _counter;
 
-        public CoinsController(LevelComponentsList coins)
+        public CoinsController(LevelComponentsList coins, AudioSource audioSource, AudioClip clip)
         {
             _coins = coins;
+            _soundPlayer = new AudioPlayer(audioSource, clip);
         }
 
         public void Initialize()
@@ -42,8 +45,8 @@ namespace Code.Controllers
             for (int i = 0; i < _coins.Count; i++)
             {
                 Sequence sequence = DOTween.Sequence();
-                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 90.0f), 5.0f, RotateMode.Fast));
-                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 180.0f), 5.0f, RotateMode.Fast));
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 70.0f), 4.0f));
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, -70.0f), 4.0f));
                 sequence.SetLoops(-1, LoopType.Yoyo);
             }
         }
@@ -55,6 +58,7 @@ namespace Code.Controllers
                 if (_coins[i].Number == coin)
                 {
                     _coins[i].Detail.gameObject.SetActive(false);
+                    _soundPlayer.PlaySound();
                 }
             }
         }

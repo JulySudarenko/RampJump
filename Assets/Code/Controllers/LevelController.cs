@@ -13,6 +13,7 @@ namespace Code.Controllers
     {
         public event Action<State> OnChangeState;
         public LevelComponentsList CoinsList { get; }
+        public LevelComponentsList ComponentsList { get; }
 
         private readonly IBallModel _ball;
         private readonly BallLandingController _ballLandingController;
@@ -34,6 +35,7 @@ namespace Code.Controllers
             _configParser = new LevelObjectsConfigParser(config);
             _ballLandingController = new BallLandingController(_configParser.Bottom, ball);
             CoinsList = _configParser.CoinsList;
+            ComponentsList = _configParser.ComponentsList;
         }
 
         public void Initialize()

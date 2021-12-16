@@ -9,6 +9,10 @@
           <e p="Assistant" t="Include">
             <e p="HelperExtentions.cs" t="Include" />
           </e>
+          <e p="Audio" t="Include">
+            <e p="AudioPlayer.cs" t="Include" />
+            <e p="ISoundPlayer.cs" t="Include" />
+          </e>
           <e p="Configs" t="Include">
             <e p="ActiveObjectConfig.cs" t="Include" />
             <e p="Data.cs" t="Include" />
@@ -25,7 +29,7 @@
             <e p="InputController.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
             <e p="RootController.cs" t="Include" />
-            <e p="StopGame.cs" t="Include" />
+            <e p="SlimeCheckout.cs" t="Include" />
           </e>
           <e p="GameBox" t="Include">
             <e p="BallArea.cs" t="Include" />
@@ -53,6 +57,7 @@
             <e p="BallModel.cs" t="Include" />
             <e p="IBallForceModel.cs" t="Include" />
             <e p="IBallModel.cs" t="Include" />
+            <e p="IBallSoundsModel.cs" t="Include" />
           </e>
           <e p="RampJump.asmdef" t="Include" />
           <e p="UniversalFactory" t="Include">
@@ -68,6 +73,7 @@
           </e>
           <e p="View" t="Include">
             <e p="EndGameView.cs" t="Include" />
+            <e p="StopGame.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

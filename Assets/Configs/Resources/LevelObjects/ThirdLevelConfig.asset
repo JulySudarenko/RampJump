@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
   BottomPrefab: {fileID: 2493657857866858101, guid: 4145b3ce732384c4ba720751c053402b,
     type: 3}
-  CoinPrefab: {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987,
+  CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
     type: 3}
   BallStartPlace: {fileID: 1952842345901982637, guid: 9d5bf7a62def73941a8a3c3dc7222e55,
     type: 3}

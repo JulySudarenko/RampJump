@@ -1,11 +1,7 @@
 ﻿using System;
 using Code.GameState;
 using Code.Interfaces;
-using Code.LevelConstructor;
-using Code.Models;
-using Code.UniversalFactory;
 using Code.UserInput;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Code.Controllers
@@ -49,7 +45,6 @@ namespace Code.Controllers
                 _isBallTouched = true;
                 _arrow.gameObject.SetActive(true);
                 _arrow.position = _ball.position;
-                OnChangeState?.Invoke(state);
             }
             else
             {
@@ -89,38 +84,6 @@ namespace Code.Controllers
             _userInput.OnChangeMousePosition -= GetMousePosition;
             _userInput.OnTouchDown -= OnMouseButtonDown;
             _userInput.OnTouch -= OnMouseButton;
-        }
-    }
-
-    internal class BallSoundController : IState
-    {
-        public event Action<State> OnChangeState;
-
-        private LevelComponentsList _componentsList;
-        private State _state;
-        private AudioListener _listener;
-        private AudioSource _source;
-        private Hit _hitBall;
-
-        public BallSoundController(IBallModel ballModel)
-        {
-        }
-
-        public void ChangeState(State state) => _state = state;
-
-        private void OnBallSlime()
-        {
-        }
-
-        private void PlaySlimeSound()
-        {
-            //_source.clip = ;
-            _source.Play();
-        }
-
-        private void StopSound()
-        {
-            _source.Stop();
         }
     }
 }
