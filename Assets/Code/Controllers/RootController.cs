@@ -24,10 +24,10 @@ namespace Code.Controllers
             var inputController = new InputController(input);
 
             var ballTouchHandlingController = new BallTouchController(configParser.BallModel,
-                _data.ActiveObjectConfig, camera, input);
+                _data.ActiveObjectConfig, camera, input, _rampSource, _data.ActiveObjectConfig.KickSound);
             var arrowController = new ArrowController(configParser.ArrowObject, input, configParser.BallModel.Ball);
             var gameplayController = new GameplayController(configParser.HoleObject, configParser.BallModel.Ball,
-                configParser.BallModel.BallID);
+                configParser.BallModel.BallID, _rampSource, _data.ActiveObjectConfig.DirectHitSound);
             var levelController = new LevelController(_endGameView, _data.LevelObjectConfig, configParser.BallModel,
                 configParser.HoleObject, configParser.ArrowObject);
             var effectController = new EffectController(configParser.BallModel.Ball, _particle);

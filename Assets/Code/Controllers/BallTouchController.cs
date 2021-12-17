@@ -4,6 +4,7 @@ using Code.GameState;
 using Code.Interfaces;
 using Code.Models;
 using Code.UserInput;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Code.Controllers
@@ -33,12 +34,13 @@ namespace Code.Controllers
         private bool _isMouseButton;
 
         public BallTouchController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
-            IUserInput userInput)
+            IUserInput userInput, [CanBeNull] AudioSource source, AudioClip clip)
         {
             _ballModel = ballModel;
             _camera = camera;
             _userInput = userInput;
             _ballForceModel = forceModel;
+            _audioPlayer  = new AudioPlayer(source, clip);
         }
 
         public void Initialize()
@@ -104,6 +106,7 @@ namespace Code.Controllers
 
         private void KickTheBall()
         {
+            _audioPlayer.PlaySound();
             _touchDirection =
                 new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
             _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);

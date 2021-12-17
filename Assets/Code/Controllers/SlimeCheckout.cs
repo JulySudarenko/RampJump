@@ -8,10 +8,9 @@ namespace Code.Controllers
 {
     internal class SlimeCheckout : IInitialize, ICleanup
     {
-        private LevelComponentsList _componentsList;
-        private Hit _ballHit;
-        private AudioPlayer _audioPlayer;
-        private int _previousDetail;
+        private readonly LevelComponentsList _componentsList;
+        private readonly Hit _ballHit;
+        private readonly AudioPlayer _audioPlayer;
         private bool _isDetailHit;
         private bool _isSlime;
 
@@ -31,7 +30,7 @@ namespace Code.Controllers
 
         private void OnStartSlime(int detailID, int ballID)
         {
-            if (!_isSlime)//_previousDetail != detailID)
+            if (!_isSlime)
             {
                 CheckHit(detailID, ballID);
                 if (_isDetailHit)
@@ -39,11 +38,7 @@ namespace Code.Controllers
                     _audioPlayer.PlaySound();
                     _isDetailHit = false;
                     _isSlime = true;
-                    Debug.Log(detailID);
-                    Debug.Log("on");
                 }
-
-                _previousDetail = detailID;
             }
         }
 
@@ -55,8 +50,6 @@ namespace Code.Controllers
                 _audioPlayer.StopSound();
                 _isDetailHit = false;
                 _isSlime = false;
-                Debug.Log(detailID);
-                Debug.Log("off");
             }
         }
 

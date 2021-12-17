@@ -2,6 +2,7 @@
 using Code.Interfaces;
 using Code.UniversalFactory;
 using Code.Assistant;
+using Code.Audio;
 using Code.GameState;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace Code.Controllers
 
         private readonly Transform _ball;
         private readonly Transform _hole;
+        private readonly AudioPlayer _audioPlayer;
         private readonly int _ballID;
 
         private TriggerContacts _contacts;
@@ -24,11 +26,12 @@ namespace Code.Controllers
         private float _counter = 0.0f;
 
 
-        public GameplayController(Transform hole, Transform ballModel, int ballID)
+        public GameplayController(Transform hole, Transform ballModel, int ballID, AudioSource source, AudioClip clip)
         {
             _ball = ballModel;
             _hole = hole;
             _ballID = ballID;
+            _audioPlayer = new AudioPlayer(source, clip);
         }
 
         public void Initialize()
@@ -53,6 +56,7 @@ namespace Code.Controllers
         {
             if (hitID == _ballID)
             {
+                _audioPlayer.PlaySound();
                 OnChangeState?.Invoke(State.Victory);
             }
         }

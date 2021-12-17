@@ -14,6 +14,8 @@ namespace Code.Configs
         [Header("Sounds")] 
         public AudioClip SlimeSound;
         public AudioClip CoinSound;
+        public AudioClip KickSound;
+        public AudioClip DirectHitSound;
         
         [Header("Ball settings")]
         [SerializeField, Range(0, 2000)] private float _force;
