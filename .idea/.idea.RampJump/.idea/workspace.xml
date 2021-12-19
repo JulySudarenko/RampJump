@@ -20,222 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316a0b96-01d5-4d50-b4ac-30d7036bf89f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Ball/BallNewMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Ball/BallNewMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/3DModels/BigRamp/BigRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/BigRamp/BigRampMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Coin/CoinMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Coin/CoinMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Coin/Coin_normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Coin/Coin_normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/RampPrefabs/BigRamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/RampPrefabs/BigRamp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/RampPrefabs/SmallRamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/RampPrefabs/SmallRamp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Ready1612/BigRamp/BigRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Ready1612/BigRamp/BigRampMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Ready1612/Small_ramp/SmallRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Ready1612/Small_ramp/SmallRampMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/3DModels/Single_stone/SingleStoneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Single_stone/SingleStoneMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/3DModels/Small_ramp/SmallRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Small_ramp/SmallRampMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Toon.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Toon.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/a2d4fd123353974.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/a2d4fd123353974.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/audio_1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/audio_1.mp3.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/SlimeCheckout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/SlimeCheckout.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/ActiveObjects/ActiveObjectConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/FirstLevelConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/LevelObjectConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/LevelObjectConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/SecondLevelConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/SecondLevelConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/ThirdLevelConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/Resources/LevelObjects/ThirdLevelConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ArrowMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/ArrowMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BackGround.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BackGround.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BallMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BallPhysicMaterial.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/BallPhysicMaterial.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/CoinMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/CoinMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/FloorMaterial.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/FloorMaterial.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/GlassMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/GlassMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/HoleMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/HoleMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/InvisibaleMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/InvisibaleMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/JumpMaterial.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/JumpMaterial.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/WalMaterial.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/test.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/test.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Arrow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Arrow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Arrow2D.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Arrow2D.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/ArrowBlender.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/ArrowBlender.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/ArrowPaint.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/ArrowPaint.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Ball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ActiveObject/Hole.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllDetails.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllDetails/BigRamp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllDetails/BigRamp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllDetails/Single_stone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AllDetails/Single_stone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArrowBlenderTest.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArrowBlenderTest.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Floor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Floor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HoleOld.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HoleOld.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Back.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Back.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom(Clone).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom(Clone).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Bottom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Coin.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Coin.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/BallPosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/BallPosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/BallStartPlace.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/BallStartPlace.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (10).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (10).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (5).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (5).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (6).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (6).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (7).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (7).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (8).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (8).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (9).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace (9).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Coins/CoinPlace.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/GameObject (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/GameObject (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/HoleStartPosition.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/HoleStartPosition.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/Ramp_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/SmallRamp(Clone).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/FirstLevel/SmallRamp(Clone).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Floor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Floor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Left.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Left.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/NewLevels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Right.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Right.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Ball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Ball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/BallStartPlace.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/BallStartPlace.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Batut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Batut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Ramp_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/Ramp_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/SmallRamp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/SecondLevel/SmallRamp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Ball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Ball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/BallStartPlace.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/BallStartPlace.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Batut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Batut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Ramp_02 (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/Ramp_02 (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/SmallRamp(Clone).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/ThirdLevel/SmallRamp(Clone).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Batut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Batut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Box.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Box.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/SmallRamp(Clone).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/SmallRamp(Clone).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/BigRamp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/BigRamp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SingleStones (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SingleStones (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SingleStones.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SingleStones.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SmallRamp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/1Level/SmallRamp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/2Level.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/3Level.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/BG.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/BG.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/Coin.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/Coin.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/Plane.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewLevels/Plane.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Batut.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Batut.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Box.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Box.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Plane.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Plane.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_03.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/Ramp_03.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/SmallRamp.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NewRamps/SmallRamp.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PartCube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PartCube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ramp.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ramp.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ramp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ramp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Walls 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Walls 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/untitled.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/untitled.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/IBallForceModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/IForceModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/IBallForceModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/IForceModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/IBallSoundsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/ISounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/IBallSoundsModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/ISounds.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball/BallPhysicMaterial.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ball/BallPhysicMaterial.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/test.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/test.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/Plane.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PrefabsOld/LevelDetails/SecondLevel/Batut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PrefabsOld/LevelDetails/SecondLevel/Batut.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PrefabsOld/LevelDetails/ThirdLevel/Batut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PrefabsOld/LevelDetails/ThirdLevel/Batut.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LevelObjects/FirstLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LevelObjects/FirstLevelConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LevelObjects/LevelObjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LevelObjects/LevelObjectConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LevelObjects/SecondLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LevelObjects/SecondLevelConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,9 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/Assistant/Extentions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/ObjectInitialization.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IFixedExecute.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/TriggerContacts.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GlassTouchHandlingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Assistant/HelperExtentions.cs" />
@@ -288,11 +101,9 @@
         <option value="$PROJECT_DIR$/Assets/Code/GameState/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameState/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Factory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallSoundController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Audio/BallAudioPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/LevelObjectsConfigParser.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameState/StateController.cs" />
@@ -300,12 +111,17 @@
         <option value="$PROJECT_DIR$/Assets/Code/Models/BallModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UniversalFactory/Hit.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/EffectController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/SlimeCheckout.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Audio/AudioPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Models/IForceModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Models/IBallSoundsModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Models/ISounds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" />
       </list>
     </option>
   </component>
@@ -335,10 +151,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29752">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="29752" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -376,90 +192,90 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="511" height="464" key="DebuggerActiveHint" timestamp="1639463332227">
+    <state width="511" height="464" key="DebuggerActiveHint" timestamp="1639808676780">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
-    <state width="511" height="464" key="DebuggerActiveHint/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639463332227" />
-    <state width="1493" height="277" key="GridCell.Tab.0.bottom" timestamp="1639668887410">
+    <state width="511" height="464" key="DebuggerActiveHint/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639808676780" />
+    <state width="1493" height="277" key="GridCell.Tab.0.bottom" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.0.center" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.0.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.0.center" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
-    <state width="1493" height="277" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.0.left" timestamp="1639668887409">
+    <state width="1493" height="277" key="GridCell.Tab.0.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.0.left" timestamp="1639818157001">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
-    <state width="1493" height="277" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887409" />
-    <state width="1493" height="277" key="GridCell.Tab.0.right" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.0.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157001" />
+    <state width="1493" height="277" key="GridCell.Tab.0.right" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112731" />
-    <state width="1493" height="277" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.0.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.1.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.1.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.2.bottom" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.1.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.2.bottom" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.2.center" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.2.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.2.center" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.2.left" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.2.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.2.left" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.2.right" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.2.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.2.right" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.3.bottom" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.2.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.3.bottom" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.3.center" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.3.bottom/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.3.center" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.3.left" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.3.center/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.3.left" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
-    <state width="1493" height="277" key="GridCell.Tab.3.right" timestamp="1639668887410">
+    <state width="1493" height="277" key="GridCell.Tab.3.left/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
+    <state width="1493" height="277" key="GridCell.Tab.3.right" timestamp="1639818157002">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>
     <state width="1877" height="365" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1639305112733" />
-    <state width="1493" height="277" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639668887410" />
+    <state width="1493" height="277" key="GridCell.Tab.3.right/1920.-154.1536.832/0.0.1920.1040@1920.-154.1536.832" timestamp="1639818157002" />
     <state x="2496" y="-40" key="RiderGenerateDialog" timestamp="1639575843864">
       <screen x="1920" y="-154" width="1536" height="832" />
     </state>

@@ -16,14 +16,13 @@ namespace Code.Controllers
         private const float HIT_DISTANCE = 100.0f;
         private const float MAX_FORCE = 3200.0f;
         private readonly IBallModel _ballModel;
-        private readonly IBallForceModel _ballForceModel;
+        private readonly IForceModel _forceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
-        private AudioPlayer _audioPlayer;
+        private readonly AudioPlayer _audioPlayer;
         private State _state;
         private Ray _ray;
         private RaycastHit _hit;
-        private Color _colorStart;
         private Vector3 _touchStartPosition;
         private Vector3 _touchDirection;
         private Vector3 _mousePosition;
@@ -33,14 +32,14 @@ namespace Code.Controllers
         private bool _isMouseButtonUp;
         private bool _isMouseButton;
 
-        public BallTouchController(IBallModel ballModel, IBallForceModel forceModel, Camera camera,
+        public BallTouchController(IBallModel ballModel, IForceModel forceModel, Camera camera,
             IUserInput userInput, [CanBeNull] AudioSource source, AudioClip clip)
         {
             _ballModel = ballModel;
             _camera = camera;
             _userInput = userInput;
-            _ballForceModel = forceModel;
-            _audioPlayer  = new AudioPlayer(source, clip);
+            _forceModel = forceModel;
+            _audioPlayer = new AudioPlayer(source, clip);
         }
 
         public void Initialize()
@@ -49,7 +48,6 @@ namespace Code.Controllers
             _userInput.OnTouchUp += OnMouseButtonUp;
             _userInput.OnTouch += OnMouseButton;
             _userInput.OnChangeMousePosition += GetMousePosition;
-            _colorStart = _ballModel.BallRenderer.material.color;
         }
 
         private void OnMouseButtonDown(bool value) => _isMouseButtonDown = value;
@@ -89,19 +87,16 @@ namespace Code.Controllers
                     OnChangeState?.Invoke(State.BallTouched);
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
                         _ballModel.Ball.position.z);
-                    _ballChangeColorSpeed = 0.0f;
-                    _force = _ballForceModel.BallForce;
+                    _force = _forceModel.BallForce;
                 }
             }
         }
 
         private void IncreaseTheSpeed(float deltaTime)
         {
-            _force += deltaTime * _ballForceModel.ForceRiseFactor;
-            _ballChangeColorSpeed += deltaTime / _ballForceModel.ColorRiseFactor;
+            _force += deltaTime * _forceModel.ForceRiseFactor;
             if (_force >= MAX_FORCE)
                 _force = MAX_FORCE;
-            _ballModel.BallRenderer.material.color = Color.Lerp(Color.yellow, Color.red, _ballChangeColorSpeed);
         }
 
         private void KickTheBall()
@@ -111,7 +106,6 @@ namespace Code.Controllers
                 new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
             _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
             OnChangeState?.Invoke(State.BallKicked);
-            _ballModel.BallRenderer.material.color = _colorStart;
         }
 
         public void Cleanup()

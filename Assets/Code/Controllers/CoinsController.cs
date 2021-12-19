@@ -12,13 +12,19 @@ namespace Code.Controllers
     internal class CoinsController : IInitialize, ICleanup
     {
         private readonly LevelComponentsList _coins;
+        private readonly ISoundPlayer _soundPlayer;
+        private readonly float _rotationAngle;
+        private readonly float _rotationSpeed;
         private TriggerContacts[] _coinsHits;
-        private ISoundPlayer _soundPlayer;
         private int _counter;
 
-        public CoinsController(LevelComponentsList coins, AudioSource audioSource, AudioClip clip)
+
+        public CoinsController(LevelComponentsList coins, AudioSource audioSource, AudioClip clip, float rotationAngle,
+            float rotationSpeed)
         {
             _coins = coins;
+            _rotationAngle = rotationAngle;
+            _rotationSpeed = rotationSpeed;
             _soundPlayer = new AudioPlayer(audioSource, clip);
         }
 
@@ -45,8 +51,8 @@ namespace Code.Controllers
             for (int i = 0; i < _coins.Count; i++)
             {
                 Sequence sequence = DOTween.Sequence();
-                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, 70.0f), 4.0f));
-                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, -70.0f), 4.0f));
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, _rotationAngle), _rotationSpeed));
+                sequence.Append(_coins[i].Detail.DORotate(new Vector3(0.0f, -_rotationAngle), _rotationSpeed));
                 sequence.SetLoops(-1, LoopType.Yoyo);
             }
         }

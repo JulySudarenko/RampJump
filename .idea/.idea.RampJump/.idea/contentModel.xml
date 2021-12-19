@@ -24,7 +24,6 @@
             <e p="BallTouchController.cs" t="Include" />
             <e p="CoinsController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
-            <e p="EffectController.cs" t="Include" />
             <e p="GameplayController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
@@ -55,9 +54,9 @@
           </e>
           <e p="Models" t="Include">
             <e p="BallModel.cs" t="Include" />
-            <e p="IBallForceModel.cs" t="Include" />
             <e p="IBallModel.cs" t="Include" />
-            <e p="IBallSoundsModel.cs" t="Include" />
+            <e p="IForceModel.cs" t="Include" />
+            <e p="ISounds.cs" t="Include" />
           </e>
           <e p="RampJump.asmdef" t="Include" />
           <e p="UniversalFactory" t="Include">

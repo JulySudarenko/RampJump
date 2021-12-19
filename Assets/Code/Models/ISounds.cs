@@ -2,7 +2,7 @@
 
 namespace Code.Models
 {
-    public interface IBallSoundsModel
+    public interface ISounds
     {
         AudioSource AudioSource { get; }
         AudioClip BallSlimeSound { get; }
