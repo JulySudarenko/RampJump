@@ -1,6 +1,5 @@
 ﻿using Code.Assistant;
-using Code.Interfaces;
-using Code.Models;
+using Code.Ball;
 using Code.UniversalFactory;
 using UnityEngine;
 
@@ -8,12 +7,13 @@ namespace Code.Controllers
 {
     internal class BallLandingController
     {
-        private readonly IBallModel _ballModel;
+        private readonly IBall _ball;
         private readonly Hit _hit;
+        private int _stopFactor = 3;
 
-        public BallLandingController(Component bottom, IBallModel ball)
+        public BallLandingController(Component bottom, IBall ball)
         {
-            _ballModel = ball;
+            _ball = ball;
             var colliderChild = bottom.GetComponentInChildren<Collider>();
             _hit = colliderChild.gameObject.GetOrAddComponent<Hit>();
         }
@@ -25,10 +25,10 @@ namespace Code.Controllers
 
         private void OnBottomHit(int collisionID, int objID)
         {
-            if (collisionID == _ballModel.Ball.gameObject.GetInstanceID())
+            if (collisionID == _ball.BallTransform.gameObject.GetInstanceID())
             {
-                _ballModel.BallRigidbody.velocity = _ballModel.BallRigidbody.velocity / 2;
-                _ballModel.BallRigidbody.angularVelocity = _ballModel.BallRigidbody.angularVelocity / 2;
+                _ball.BallRigidbody.velocity = _ball.BallRigidbody.velocity / _stopFactor;
+                _ball.BallRigidbody.angularVelocity = _ball.BallRigidbody.angularVelocity / _stopFactor;
             }
         }
 

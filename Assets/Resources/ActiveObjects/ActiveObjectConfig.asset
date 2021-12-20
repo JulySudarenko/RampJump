@@ -18,6 +18,13 @@ MonoBehaviour:
     type: 3}
   HolePrefab: {fileID: 1360256838282906327, guid: dfbdb70fcbee47a4ca43cc28673c9f0d,
     type: 3}
+  _arrowColors:
+  - {fileID: 2100000, guid: d901fcfe524ca7646b10feeee0155395, type: 2}
+  - {fileID: 2100000, guid: bff73cf50b5310c439cac863e87e72f9, type: 2}
+  - {fileID: 2100000, guid: 721de26b43b51e24da01103a6a124bf2, type: 2}
+  - {fileID: 2100000, guid: 166100ad26fbc594f8c00e2df2b22251, type: 2}
+  - {fileID: 2100000, guid: 0ea53a1e2f79c984aa952ad0f999cd96, type: 2}
+  - {fileID: 2100000, guid: aae224f1b533d20498ea907d6f01c6ac, type: 2}
   SlimeSound: {fileID: 8300000, guid: 38ef96bb3e671df4096d86fd37375484, type: 3}
   CoinSound: {fileID: 8300000, guid: dbc3ffa7bb1653c49ac49f878132d71b, type: 3}
   KickSound: {fileID: 8300000, guid: 4df417a1efeb37f4aa6ae5a2d617f312, type: 3}
@@ -25,3 +32,5 @@ MonoBehaviour:
   _force: 500
   _forceRiseFactor: 300
   _colorRiseFactor: 10
+  _coinsRotationAngle: 70
+  _coinsRotationSpeed: 4

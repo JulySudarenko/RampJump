@@ -1,5 +1,5 @@
-﻿using Code.Configs;
-using Code.Models;
+﻿using Code.Ball;
+using Code.Configs;
 using Code.UniversalFactory;
 using UnityEngine;
 
@@ -7,7 +7,7 @@ namespace Code.LevelConstructor
 {
     internal class ActiveObjectsConfigParser
     {
-        public IBallModel BallModel { get; private set; }
+        public IBall Ball { get; private set; }
         public Transform ArrowObject { get; private set; }
         public Transform HoleObject { get; private set; }
         public AudioClip BallSlimeSound { get; }
@@ -25,7 +25,7 @@ namespace Code.LevelConstructor
 
         private void Init()
         {
-            BallModel = new BallModel(_activeObjectConfigs);
+            Ball = new Ball.Ball(_activeObjectConfigs);
             ArrowObject = new ObjectInitialization(new Factory(_activeObjectConfigs.ArrowPrefab)).Create();
             HoleObject = new ObjectInitialization(new Factory(_activeObjectConfigs.HolePrefab)).Create();
         }

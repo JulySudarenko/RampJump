@@ -1,4 +1,5 @@
-﻿using Code.Models;
+﻿using System.Collections.Generic;
+using Code.Ball;
 using UnityEngine;
 
 namespace Code.Configs
@@ -10,7 +11,10 @@ namespace Code.Configs
         public Transform BallPrefab;
         public Transform ArrowPrefab;
         public Transform HolePrefab;
-
+        
+        [Header("Arrow settings")]
+        [SerializeField] private List<Material> _arrowColors;
+        
         [Header("Sounds")] 
         public AudioClip SlimeSound;
         public AudioClip CoinSound;
@@ -21,11 +25,12 @@ namespace Code.Configs
         [SerializeField, Range(0, 2000)] private float _force;
         [SerializeField, Range(0, 500)] private float _forceRiseFactor = 50.0f;
         [SerializeField, Range(0, 50)] private float _colorRiseFactor = 5.0f;
-
+        
         [Header("Coins settings")] 
         [SerializeField, Range(0, 180)] private float _coinsRotationAngle = 70.0f;
         [SerializeField, Range(0, 10)] private float _coinsRotationSpeed = 4.0f;
-        
+
+        public List<Material> ArrowColors => _arrowColors;
         public float BallForce => _force;
         public float ForceRiseFactor => _forceRiseFactor;
         public float ColorRiseFactor => _colorRiseFactor;

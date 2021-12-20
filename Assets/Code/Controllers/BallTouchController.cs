@@ -1,8 +1,8 @@
 ﻿using System;
 using Code.Audio;
+using Code.Ball;
 using Code.GameState;
 using Code.Interfaces;
-using Code.Models;
 using Code.UserInput;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace Code.Controllers
 
         private const float HIT_DISTANCE = 100.0f;
         private const float MAX_FORCE = 3200.0f;
-        private readonly IBallModel _ballModel;
+        private readonly IBall _ball;
         private readonly IForceModel _forceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
@@ -32,10 +32,10 @@ namespace Code.Controllers
         private bool _isMouseButtonUp;
         private bool _isMouseButton;
 
-        public BallTouchController(IBallModel ballModel, IForceModel forceModel, Camera camera,
+        public BallTouchController(IBall ball, IForceModel forceModel, Camera camera,
             IUserInput userInput, [CanBeNull] AudioSource source, AudioClip clip)
         {
-            _ballModel = ballModel;
+            _ball = ball;
             _camera = camera;
             _userInput = userInput;
             _forceModel = forceModel;
@@ -82,11 +82,11 @@ namespace Code.Controllers
 
             if (Physics.Raycast(_ray, out _hit, HIT_DISTANCE))
             {
-                if (_hit.collider.gameObject.GetInstanceID() == _ballModel.BallID)
+                if (_hit.collider.gameObject.GetInstanceID() == _ball.BallID)
                 {
                     OnChangeState?.Invoke(State.BallTouched);
                     _touchStartPosition = new Vector3(_mousePosition.x, _mousePosition.y,
-                        _ballModel.Ball.position.z);
+                        _ball.BallTransform.position.z);
                     _force = _forceModel.BallForce;
                 }
             }
@@ -103,8 +103,8 @@ namespace Code.Controllers
         {
             _audioPlayer.PlaySound();
             _touchDirection =
-                new Vector3(_mousePosition.x, _mousePosition.y, _ballModel.Ball.position.z);
-            _ballModel.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
+                new Vector3(_mousePosition.x, _mousePosition.y, _ball.BallTransform.position.z);
+            _ball.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);
             OnChangeState?.Invoke(State.BallKicked);
         }
 

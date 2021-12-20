@@ -1,9 +1,9 @@
 ﻿using System;
+using Code.Ball;
 using Code.Configs;
 using Code.GameState;
 using Code.Interfaces;
 using Code.LevelConstructor;
-using Code.Models;
 using Code.View;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace Code.Controllers
         public LevelComponentsList CoinsList { get; }
         public LevelComponentsList ComponentsList { get; }
 
-        private readonly IBallModel _ball;
+        private readonly IBall _ball;
         private readonly BallLandingController _ballLandingController;
         private readonly EndGameView _endGameView;
         private readonly LevelObjectsConfigParser _configParser;
@@ -24,7 +24,7 @@ namespace Code.Controllers
         private int _levelCounter = 1;
 
         public LevelController(EndGameView endGameView,
-            LevelObjectConfig[] config, IBallModel ball, Transform hole, Transform arrow)
+            LevelObjectConfig[] config, IBall ball, Transform hole, Transform arrow)
         {
             _endGameView = endGameView;
             _ball = ball;
@@ -94,7 +94,7 @@ namespace Code.Controllers
         private void UpdateStartPositions()
         {
             _configParser.BallStartPlace.gameObject.SetActive(true);
-            _ball.Ball.position = _configParser.BallStartPosition;
+            _ball.BallTransform.position = _configParser.BallStartPosition;
             _ball.BallRigidbody.velocity = Vector3.zero;
             _ball.BallRigidbody.angularVelocity = Vector3.zero;
             _arrow.position = _configParser.BallStartPosition;

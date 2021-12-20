@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelDetailsPrefabs: []
   CoinsPlaces:
-  - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
-  BottomPrefab: {fileID: 7879797511170999180, guid: 1526b09c091b3d04fb2c2954da82d12b,
+  - {fileID: 2561835168777433298, guid: befbb8cedb5143946b92fc11c05f6256, type: 3}
+  BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
     type: 3}
   CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
     type: 3}

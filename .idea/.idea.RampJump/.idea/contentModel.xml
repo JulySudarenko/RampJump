@@ -6,12 +6,21 @@
     <e p="D:\geekbrains.ru\Projects\Unity\RampJump" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
+          <e p="Arrow" t="Include">
+            <e p="ArrowColor.cs" t="Include" />
+            <e p="ArrowDirection.cs" t="Include" />
+          </e>
           <e p="Assistant" t="Include">
             <e p="HelperExtentions.cs" t="Include" />
           </e>
           <e p="Audio" t="Include">
             <e p="AudioPlayer.cs" t="Include" />
             <e p="ISoundPlayer.cs" t="Include" />
+          </e>
+          <e p="Ball" t="Include">
+            <e p="Ball.cs" t="Include" />
+            <e p="IBall.cs" t="Include" />
+            <e p="IForceModel.cs" t="Include" />
           </e>
           <e p="Configs" t="Include">
             <e p="ActiveObjectConfig.cs" t="Include" />
@@ -52,13 +61,13 @@
             <e p="LevelComponentsList.cs" t="Include" />
             <e p="LevelObjectsConfigParser.cs" t="Include" />
           </e>
-          <e p="Models" t="Include">
-            <e p="BallModel.cs" t="Include" />
-            <e p="IBallModel.cs" t="Include" />
-            <e p="IForceModel.cs" t="Include" />
-            <e p="ISounds.cs" t="Include" />
-          </e>
           <e p="RampJump.asmdef" t="Include" />
+          <e p="Timer" t="Include">
+            <e p="ITimeRemaining.cs" t="Include" />
+            <e p="TimeRemaining.cs" t="Include" />
+            <e p="TimeRemainingController.cs" t="Include" />
+            <e p="TimeRemainingExtensions.cs" t="Include" />
+          </e>
           <e p="UniversalFactory" t="Include">
             <e p="Factory.cs" t="Include" />
             <e p="Hit.cs" t="Include" />

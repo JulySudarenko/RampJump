@@ -17,8 +17,8 @@ MonoBehaviour:
   - {fileID: 1891236311718030119, guid: 1fec7821634950e4083f3b4d692a733a, type: 3}
   - {fileID: 4863865032267799161, guid: f2ffb362a46492d41acf3cbf50d8bd76, type: 3}
   CoinsPlaces:
-  - {fileID: 2746119613589420995, guid: 764c14f0c45e0e84aaf42bb1ed2d0987, type: 3}
-  BottomPrefab: {fileID: 2493657857866858101, guid: 4145b3ce732384c4ba720751c053402b,
+  - {fileID: 2465582686408318096, guid: 1de1e7203a9e34640ad69d6aee3d8340, type: 3}
+  BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
     type: 3}
   CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
     type: 3}
