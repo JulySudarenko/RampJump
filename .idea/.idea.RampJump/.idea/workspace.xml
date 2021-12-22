@@ -20,42 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316a0b96-01d5-4d50-b4ac-30d7036bf89f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CoinsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/SlimeCheckout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/SlimeCheckout.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameBox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameBox/BallArea.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameBox/BallArea.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameState/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/GameState/StateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IBallEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IFinishEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/RampJump.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/RampJump.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/StopGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/GameMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/StopGame.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/GameMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball/BallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ball/BallMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BigRamp/BigRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BigRamp/BigRampMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Plane/PlaneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Plane/PlaneMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rock1/Rock1Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rock1/Rock1Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rock2/Rock2Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rock2/Rock2Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Single_stone/SingleStoneMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Single_stone/SingleStoneMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tree_2/Tree2Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tree_2/Tree2Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/ThemeGolf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/ThemeGolf.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SingleStones (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SingleStones (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SingleStones.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SingleStones.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SmallRamp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelDetails/1Level/SmallRamp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,9 +97,9 @@
         <option value="$PROJECT_DIR$/Assets/Code/View/StopGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/GameMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/MenuView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameState/StateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
       </list>
     </option>
   </component>

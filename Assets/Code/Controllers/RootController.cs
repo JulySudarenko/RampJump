@@ -24,6 +24,7 @@ namespace Code.Controllers
             Camera camera = Camera.main;
             var cameraAudioSource = camera.gameObject.GetOrAddComponent<AudioSource>();
             var menu = new GameMenu(_menuView);
+            
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
 
