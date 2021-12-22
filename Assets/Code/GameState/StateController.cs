@@ -6,21 +6,21 @@ namespace Code.GameState
 {
     internal class StateController : IInitialize, ICleanup
     {
-        public Action<State> OnChangeState;
-
-        private readonly IState _ballActions;
+        private readonly IState _ballController;
         private readonly IState _arrowController;
-        private readonly IState _gameplayActions;
+        private readonly IState _gameplayController;
         private readonly IState _levelController;
+        private readonly IState _coinsController;
         private State _state;
 
         public StateController(BallTouchController ballEvents, ArrowController arrowController,
-            GameplayController gameplayController, LevelController levelController)
+            GameplayController gameplayController, LevelController levelController, CoinsController coins)
         {
-            _ballActions = ballEvents;
-            _gameplayActions = gameplayController;
+            _ballController = ballEvents;
+            _gameplayController = gameplayController;
             _arrowController = arrowController;
             _levelController = levelController;
+            _coinsController = coins;
         }
 
         private void ChangeState(State state)
@@ -30,24 +30,30 @@ namespace Code.GameState
             {
                 case State.Start:
                     _levelController.ChangeState(_state);
-                    _ballActions.ChangeState(_state);
+                    _ballController.ChangeState(_state);
+                    _coinsController.ChangeState(_state);
+                    _gameplayController.ChangeState(_state);
                     break;
                 case State.BallTouched:
                     _arrowController.ChangeState(_state);
-                    _ballActions.ChangeState(_state);
+                    _ballController.ChangeState(_state);
+                    _coinsController.ChangeState(_state);
+                    _gameplayController.ChangeState(_state);
                     break;
                 case State.BallKicked:
                     _arrowController.ChangeState(_state);
-                    _gameplayActions.ChangeState(_state);
+                    _gameplayController.ChangeState(_state);
                     _levelController.ChangeState(_state);
-                    _ballActions.ChangeState(_state);
+                    _ballController.ChangeState(_state);
                     break;
                 case State.Victory:
-                    _gameplayActions.ChangeState(_state);
+                    _gameplayController.ChangeState(_state);
+                    _coinsController.ChangeState(_state);
                     _levelController.ChangeState(_state);
                     break;
                 case State.Defeat:
-                    _gameplayActions.ChangeState(_state);
+                    _gameplayController.ChangeState(_state);
+                    _coinsController.ChangeState(_state);
                     _levelController.ChangeState(_state);
                     break;
                 default:
@@ -57,15 +63,15 @@ namespace Code.GameState
 
         public void Initialize()
         {
-            _ballActions.OnChangeState += ChangeState;
-            _gameplayActions.OnChangeState += ChangeState;
+            _ballController.OnChangeState += ChangeState;
+            _gameplayController.OnChangeState += ChangeState;
             _levelController.OnChangeState += ChangeState;
         }
 
         public void Cleanup()
         {
-            _ballActions.OnChangeState -= ChangeState;
-            _gameplayActions.OnChangeState -= ChangeState;
+            _ballController.OnChangeState -= ChangeState;
+            _gameplayController.OnChangeState -= ChangeState;
             _levelController.OnChangeState -= ChangeState;
         }
     }

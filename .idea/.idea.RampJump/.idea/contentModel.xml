@@ -39,20 +39,15 @@
             <e p="RootController.cs" t="Include" />
             <e p="SlimeCheckout.cs" t="Include" />
           </e>
-          <e p="GameBox" t="Include">
-            <e p="BallArea.cs" t="Include" />
-          </e>
           <e p="GameState" t="Include">
             <e p="IState.cs" t="Include" />
             <e p="State.cs" t="Include" />
             <e p="StateController.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
-            <e p="IBallEvents.cs" t="Include" />
             <e p="ICleanup.cs" t="Include" />
             <e p="IController.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
-            <e p="IFinishEvents.cs" t="Include" />
             <e p="IInitialize.cs" t="Include" />
           </e>
           <e p="LevelConstructor" t="Include">
@@ -80,8 +75,11 @@
             <e p="UserInputHandling.cs" t="Include" />
           </e>
           <e p="View" t="Include">
+            <e p="CoinCounterView.cs" t="Include" />
             <e p="EndGameView.cs" t="Include" />
-            <e p="StopGame.cs" t="Include" />
+            <e p="GameMenu.cs" t="Include" />
+            <e p="MenuView.cs" t="Include" />
+            <e p="StarEffectView.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

@@ -18,20 +18,23 @@ namespace Code.Controllers
         private readonly IBall _ball;
         private readonly BallLandingController _ballLandingController;
         private readonly EndGameView _endGameView;
+        private readonly MenuView _menuView;
         private readonly LevelObjectsConfigParser _configParser;
         private readonly Transform _hole;
         private readonly Transform _arrow;
         private int _levelCounter = 1;
 
-        public LevelController(EndGameView endGameView,
+        public LevelController(EndGameView endGameView, MenuView menuView,
             LevelObjectConfig[] config, IBall ball, Transform hole, Transform arrow)
         {
             _endGameView = endGameView;
+            _menuView = menuView;
             _ball = ball;
             _hole = hole;
             _arrow = arrow;
             _endGameView.NextLevelButton.onClick.AddListener(_endGameView.Restart);
             _endGameView.RestartLevelButton.onClick.AddListener(_endGameView.Restart);
+            _menuView.Restart.onClick.AddListener(RestartLevel);
             _configParser = new LevelObjectsConfigParser(config);
             _ballLandingController = new BallLandingController(_configParser.Bottom, ball);
             CoinsList = _configParser.CoinsList;
@@ -91,6 +94,11 @@ namespace Code.Controllers
             OnChangeState?.Invoke(State.Start);
         }
 
+        private void RestartLevel()
+        {
+            OnChangeState?.Invoke(State.Start);
+        }
+
         private void UpdateStartPositions()
         {
             _configParser.BallStartPlace.gameObject.SetActive(true);
@@ -99,7 +107,6 @@ namespace Code.Controllers
             _ball.BallRigidbody.angularVelocity = Vector3.zero;
             _arrow.position = _configParser.BallStartPosition;
             _hole.position = _configParser.HoleStartPosition;
-
             _configParser.ReloadCoins(_levelCounter);
         }
 
@@ -108,6 +115,7 @@ namespace Code.Controllers
             _ballLandingController.Cleanup();
             _endGameView.NextLevelButton.onClick.RemoveAllListeners();
             _endGameView.RestartLevelButton.onClick.RemoveAllListeners();
+            _menuView.Restart.onClick.RemoveAllListeners();
         }
     }
 }

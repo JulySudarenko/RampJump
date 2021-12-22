@@ -7,9 +7,9 @@ namespace Code.Controllers
 {
     internal class BallLandingController
     {
+        private const int STOP_FACTOR = 5;
         private readonly IBall _ball;
         private readonly Hit _hit;
-        private int _stopFactor = 3;
 
         public BallLandingController(Component bottom, IBall ball)
         {
@@ -27,8 +27,8 @@ namespace Code.Controllers
         {
             if (collisionID == _ball.BallTransform.gameObject.GetInstanceID())
             {
-                _ball.BallRigidbody.velocity = _ball.BallRigidbody.velocity / _stopFactor;
-                _ball.BallRigidbody.angularVelocity = _ball.BallRigidbody.angularVelocity / _stopFactor;
+                _ball.BallRigidbody.velocity /= STOP_FACTOR;
+                _ball.BallRigidbody.angularVelocity /= STOP_FACTOR;
             }
         }
 

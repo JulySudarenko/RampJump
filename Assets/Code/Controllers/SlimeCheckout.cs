@@ -10,7 +10,7 @@ namespace Code.Controllers
     {
         private readonly LevelComponentsList _componentsList;
         private readonly Hit _ballHit;
-        private readonly AudioPlayer _audioPlayer;
+        private readonly ISoundPlayer _audioPlayer;
         private bool _isDetailHit;
         private bool _isSlime;
 

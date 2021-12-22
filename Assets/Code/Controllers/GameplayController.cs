@@ -14,12 +14,10 @@ namespace Code.Controllers
 
         private const float MAX_STOP_DURATION = 50.0f;
         private const float DISTANCE_TRASH = 0.005f;
-
         private readonly Transform _ball;
         private readonly Transform _hole;
-        private readonly AudioPlayer _audioPlayer;
+        private readonly ISoundPlayer _audioPlayer;
         private readonly int _ballID;
-
         private TriggerContacts _contacts;
         private State _state;
         private Vector3 _previousPosition;

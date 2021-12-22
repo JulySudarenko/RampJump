@@ -19,7 +19,7 @@ namespace Code.Controllers
         private readonly IForceModel _forceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
-        private readonly AudioPlayer _audioPlayer;
+        private readonly ISoundPlayer _audioPlayer;
         private State _state;
         private Ray _ray;
         private RaycastHit _hit;
