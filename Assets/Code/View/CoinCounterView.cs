@@ -12,10 +12,5 @@ namespace Code.View
         {
             _coinCount.text = $"{coins} / {coinsMax}";
         }
-
-        public void HideOrShow(bool value)
-        {
-            _panel.SetActive(value);
-        }
     }
 }

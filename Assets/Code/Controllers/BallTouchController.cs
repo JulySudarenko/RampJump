@@ -55,6 +55,8 @@ namespace Code.Controllers
         private void OnMouseButton(bool value) => _isMouseButton = value;
         private void GetMousePosition(Vector3 position) => _mousePosition = position;
 
+        public void ChangeState(State state) => _state = state;
+
         public void Execute(float deltaTime)
         {
             if (_isMouseButtonDown && _state == State.Start)
@@ -115,7 +117,5 @@ namespace Code.Controllers
             _userInput.OnTouch -= OnMouseButton;
             _userInput.OnChangeMousePosition -= GetMousePosition;
         }
-
-        public void ChangeState(State state) => _state = state;
     }
 }

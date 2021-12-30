@@ -51,8 +51,6 @@ namespace Code.Controllers
             {
                 _coinsHits[i].IsContact += TakeCoin;
             }
-
-            _coinCounterView.HideOrShow(true);
             TwistCoins();
             CountCoins();
         }
@@ -81,7 +79,7 @@ namespace Code.Controllers
                 }
             }
         }
-        
+
         public void ChangeState(State state)
         {
             switch (state)
@@ -90,19 +88,18 @@ namespace Code.Controllers
                     CountCoins();
                     break;
                 case State.BallTouched:
-                    _coinCounterView.HideOrShow(true);
                     break;
                 case State.BallKicked:
                     break;
                 case State.Victory:
-                    _coinCounterView.HideOrShow(false);
                     int rate = GetResult();
                     _starEffectView.ShowEndStarEffect(rate);
                     break;
                 case State.Defeat:
                     int rateD = GetResult();
                     _starEffectView.ShowEndStarEffect(rateD);
-                    _coinCounterView.HideOrShow(false);
+                    break;
+                case State.Loading:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
@@ -127,14 +124,12 @@ namespace Code.Controllers
         private int GetResult()
         {
             float ratio = (float) _counter / _coinsOnLevelMax * 100.0f;
-            Debug.Log(ratio);
             if (ratio >= 99.9f) return 3;
             if (ratio >= 66.6f) return 2;
             if (ratio >= 33.3f) return 1;
             return 0;
         }
-
-
+        
         public void Cleanup()
         {
             for (int i = 0; i < _coinsHits.Length; i++)

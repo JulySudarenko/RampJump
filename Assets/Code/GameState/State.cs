@@ -7,5 +7,6 @@
         BallKicked = 2,
         Victory = 3,
         Defeat = 4,
+        Loading = 5
     }
 }

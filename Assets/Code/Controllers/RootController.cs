@@ -23,8 +23,10 @@ namespace Code.Controllers
             var configParser = new ActiveObjectsConfigParser(_data.ActiveObjectConfig);
             Camera camera = Camera.main;
             var cameraAudioSource = camera.gameObject.GetOrAddComponent<AudioSource>();
+
             var menu = new GameMenu(_menuView);
-            
+            var viewController = new ViewController(_endGameView, _menuView);
+
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
 
@@ -34,7 +36,7 @@ namespace Code.Controllers
                 _data.ActiveObjectConfig, _data.ActiveObjectConfig.ArrowColors);
             var gameplayController = new GameplayController(configParser.HoleObject, configParser.Ball.BallTransform,
                 configParser.Ball.BallID, cameraAudioSource, _data.ActiveObjectConfig.DirectHitSound);
-            var levelController = new LevelController(_endGameView, _menuView, _data.LevelObjectConfig, configParser.Ball,
+            var levelController = new LevelController(_data.LevelObjectConfig, configParser.Ball,
                 configParser.HoleObject, configParser.ArrowObject);
 
             var coins = new CoinsController(levelController.CoinsList, configParser.Ball.BallAudioSource,
@@ -44,12 +46,14 @@ namespace Code.Controllers
                 configParser.BallSlimeSound, configParser.Ball.BallHit);
 
             var gameStateController = new StateController(ballTouchHandlingController, arrowController,
-                gameplayController, levelController, coins);
+                gameplayController, levelController, coins, viewController);
+
 
             _controllers = new Controllers();
             _controllers.Add(inputController);
             _controllers.Add(new TimeRemainingController());
             _controllers.Add(menu);
+            _controllers.Add(viewController);
             _controllers.Add(ballTouchHandlingController);
             _controllers.Add(arrowController);
             _controllers.Add(gameplayController);

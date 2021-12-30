@@ -4,7 +4,6 @@ using Code.Configs;
 using Code.GameState;
 using Code.Interfaces;
 using Code.LevelConstructor;
-using Code.View;
 using UnityEngine;
 
 namespace Code.Controllers
@@ -17,24 +16,16 @@ namespace Code.Controllers
 
         private readonly IBall _ball;
         private readonly BallLandingController _ballLandingController;
-        private readonly EndGameView _endGameView;
-        private readonly MenuView _menuView;
         private readonly LevelObjectsConfigParser _configParser;
         private readonly Transform _hole;
         private readonly Transform _arrow;
         private int _levelCounter = 1;
 
-        public LevelController(EndGameView endGameView, MenuView menuView,
-            LevelObjectConfig[] config, IBall ball, Transform hole, Transform arrow)
+        public LevelController(LevelObjectConfig[] config, IBall ball, Transform hole, Transform arrow)
         {
-            _endGameView = endGameView;
-            _menuView = menuView;
             _ball = ball;
             _hole = hole;
             _arrow = arrow;
-            _endGameView.NextLevelButton.onClick.AddListener(_endGameView.Restart);
-            _endGameView.RestartLevelButton.onClick.AddListener(_endGameView.Restart);
-            _menuView.Restart.onClick.AddListener(RestartLevel);
             _configParser = new LevelObjectsConfigParser(config);
             _ballLandingController = new BallLandingController(_configParser.Bottom, ball);
             CoinsList = _configParser.CoinsList;
@@ -43,7 +34,6 @@ namespace Code.Controllers
 
         public void Initialize()
         {
-            _endGameView.Restart();
             _configParser.InitNewLevel(_levelCounter);
             UpdateStartPositions();
             _ballLandingController.Init();
@@ -54,7 +44,7 @@ namespace Code.Controllers
             switch (state)
             {
                 case State.Start:
-                    UpdateStartPositions();
+
                     break;
                 case State.BallTouched:
                     break;
@@ -63,10 +53,11 @@ namespace Code.Controllers
                     break;
                 case State.Victory:
                     PlayVictoryVariant();
-                    UpdateStartPositions();
                     break;
                 case State.Defeat:
-                    PlayDefeatVariant();
+                    RestartLevel();
+                    break;
+                case State.Loading:
                     UpdateStartPositions();
                     break;
                 default:
@@ -82,21 +73,13 @@ namespace Code.Controllers
                 _levelCounter = 1;
             }
 
-            _endGameView.ShowWinPanel();
             _configParser.InitNewLevel(_levelCounter);
-            OnChangeState?.Invoke(State.Start);
-        }
-
-        private void PlayDefeatVariant()
-        {
-            _endGameView.ShowLosePanel();
-
-            OnChangeState?.Invoke(State.Start);
+            OnChangeState?.Invoke(State.Loading);
         }
 
         private void RestartLevel()
         {
-            OnChangeState?.Invoke(State.Start);
+            OnChangeState?.Invoke(State.Loading);
         }
 
         private void UpdateStartPositions()
@@ -108,14 +91,13 @@ namespace Code.Controllers
             _arrow.position = _configParser.BallStartPosition;
             _hole.position = _configParser.HoleStartPosition;
             _configParser.ReloadCoins(_levelCounter);
+
+            OnChangeState?.Invoke(State.Start);
         }
 
         public void Cleanup()
         {
             _ballLandingController.Cleanup();
-            _endGameView.NextLevelButton.onClick.RemoveAllListeners();
-            _endGameView.RestartLevelButton.onClick.RemoveAllListeners();
-            _menuView.Restart.onClick.RemoveAllListeners();
         }
     }
 }

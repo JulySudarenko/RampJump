@@ -38,6 +38,7 @@
             <e p="LevelController.cs" t="Include" />
             <e p="RootController.cs" t="Include" />
             <e p="SlimeCheckout.cs" t="Include" />
+            <e p="ViewController.cs" t="Include" />
           </e>
           <e p="GameState" t="Include">
             <e p="IState.cs" t="Include" />
@@ -55,6 +56,13 @@
             <e p="LevelComponent.cs" t="Include" />
             <e p="LevelComponentsList.cs" t="Include" />
             <e p="LevelObjectsConfigParser.cs" t="Include" />
+          </e>
+          <e p="LevelCreator" t="Include">
+            <e p="DetailCreatingInfo.cs" t="Include" />
+            <e p="DetailCreatingInfoList.cs" t="Include" />
+            <e p="DetailsBaseConfig.cs" t="Include" />
+            <e p="LevelsConfig.cs" t="Include" />
+            <e p="LevelsConfigEditor.cs" t="Include" />
           </e>
           <e p="RampJump.asmdef" t="Include" />
           <e p="Timer" t="Include">
@@ -80,6 +88,13 @@
             <e p="GameMenu.cs" t="Include" />
             <e p="MenuView.cs" t="Include" />
             <e p="StarEffectView.cs" t="Include" />
+          </e>
+          <e p="ViewCommand" t="Include">
+            <e p="EndGameViewCommand.cs" t="Include" />
+            <e p="MainUICommandBase.cs" t="Include" />
+            <e p="MenuViewCommand.cs" t="Include" />
+            <e p="PanelCommand.cs" t="Include" />
+            <e p="StateUI.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Code.View
 {
-    internal sealed class EndGameView : MonoBehaviour
+    public sealed class EndGameView : MonoBehaviour
     {
         [SerializeField] private GameObject _gamePanel;
         [SerializeField] private Button _nextLevelButton;

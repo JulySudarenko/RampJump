@@ -13,11 +13,20 @@ MonoBehaviour:
   m_Name: SecondLevelConfig
   m_EditorClassIdentifier: 
   LevelDetailsPrefabs:
-  - {fileID: 6575456670583513635, guid: 8604d5c8a3bbc4c4498afa434495c9f3, type: 3}
+  - {fileID: 5861696005220916260, guid: 73704f5cd27f8504a8a14c7a5505aa26, type: 3}
   - {fileID: 9210720411267899274, guid: c76015fc494a2534681ec985a3a119c1, type: 3}
   - {fileID: 7598062404183423863, guid: 4086b5549a77bd541879251992bd983f, type: 3}
   CoinsPlaces:
-  - {fileID: 5143805046641046835, guid: b4e9c200fd0dc984c816ddd2478ce089, type: 3}
+  - {fileID: 2962209786717394551, guid: d32871dd75074f748a98fd7905878323, type: 3}
+  - {fileID: 2293252780523175605, guid: 43a166c0118d9324cbfe3f19c893480f, type: 3}
+  - {fileID: 6168908887782537013, guid: ce6cad48966f32e468f2e3de337fa0c2, type: 3}
+  - {fileID: 7454487588762245984, guid: 8954a4c67c238c6488adb6e0c11df0d3, type: 3}
+  - {fileID: 6493654921220274263, guid: ea015c72e8740c14d98b5f68c3383d48, type: 3}
+  - {fileID: 1977466142679694580, guid: 5ab3400a5e521b94f9fc344b7a1be9e7, type: 3}
+  - {fileID: 4121996803021074776, guid: 9c354e56974aa0d4088f18978560ef3f, type: 3}
+  - {fileID: 8904913384367160300, guid: 161d7231d5ede5a488e4418925f732db, type: 3}
+  - {fileID: 6534238082287686887, guid: 1b061c3819afe1e45b2cdd32f8fbe7a1, type: 3}
+  - {fileID: 7932666288612628117, guid: ce3a3774cc053864e8b113343e570120, type: 3}
   BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
     type: 3}
   CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
@@ -28,4 +37,4 @@ MonoBehaviour:
     type: 3}
   HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
     type: 3}
-  _levelNumber: 2
+  _levelNumber: 3

@@ -52,6 +52,8 @@ namespace Code.Controllers
                     break;
                 case State.Defeat:
                     break;
+                case State.Loading:
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
