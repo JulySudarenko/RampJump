@@ -6,8 +6,21 @@
     <e p="D:\geekbrains.ru\Projects\Unity\RampJump" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
+          <e p="Arrow" t="Include">
+            <e p="ArrowColor.cs" t="Include" />
+            <e p="ArrowDirection.cs" t="Include" />
+          </e>
           <e p="Assistant" t="Include">
             <e p="HelperExtentions.cs" t="Include" />
+          </e>
+          <e p="Audio" t="Include">
+            <e p="AudioPlayer.cs" t="Include" />
+            <e p="ISoundPlayer.cs" t="Include" />
+          </e>
+          <e p="Ball" t="Include">
+            <e p="Ball.cs" t="Include" />
+            <e p="IBall.cs" t="Include" />
+            <e p="IForceModel.cs" t="Include" />
           </e>
           <e p="Configs" t="Include">
             <e p="ActiveObjectConfig.cs" t="Include" />
@@ -16,37 +29,48 @@
           </e>
           <e p="Controllers" t="Include">
             <e p="ArrowController.cs" t="Include" />
-            <e p="BallFallingHandler.cs" t="Include" />
-            <e p="BallTouchHandlingController.cs" t="Include" />
+            <e p="BallLandingController.cs" t="Include" />
+            <e p="BallTouchController.cs" t="Include" />
+            <e p="CoinsController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
             <e p="GameplayController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
             <e p="RootController.cs" t="Include" />
-            <e p="StopGame.cs" t="Include" />
+            <e p="SlimeCheckout.cs" t="Include" />
+            <e p="ViewController.cs" t="Include" />
+          </e>
+          <e p="GameState" t="Include">
+            <e p="IState.cs" t="Include" />
+            <e p="State.cs" t="Include" />
+            <e p="StateController.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
-            <e p="IBallEvents.cs" t="Include" />
             <e p="ICleanup.cs" t="Include" />
             <e p="IController.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
-            <e p="IFinishEvents.cs" t="Include" />
-            <e p="IFixedExecute.cs" t="Include" />
             <e p="IInitialize.cs" t="Include" />
           </e>
           <e p="LevelConstructor" t="Include">
             <e p="ActiveObjectsConfigParser.cs" t="Include" />
-            <e p="ILevel.cs" t="Include" />
-            <e p="LevelDetail.cs" t="Include" />
-            <e p="LevelDetailsList.cs" t="Include" />
+            <e p="LevelComponent.cs" t="Include" />
+            <e p="LevelComponentsList.cs" t="Include" />
             <e p="LevelObjectsConfigParser.cs" t="Include" />
           </e>
-          <e p="Models" t="Include">
-            <e p="BallModel.cs" t="Include" />
-            <e p="IBallForceModel.cs" t="Include" />
-            <e p="IBallModel.cs" t="Include" />
+          <e p="LevelCreator" t="Include">
+            <e p="DetailCreatingInfo.cs" t="Include" />
+            <e p="DetailCreatingInfoList.cs" t="Include" />
+            <e p="DetailsBaseConfig.cs" t="Include" />
+            <e p="LevelsConfig.cs" t="Include" />
+            <e p="LevelsConfigEditor.cs" t="Include" />
           </e>
           <e p="RampJump.asmdef" t="Include" />
+          <e p="Timer" t="Include">
+            <e p="ITimeRemaining.cs" t="Include" />
+            <e p="TimeRemaining.cs" t="Include" />
+            <e p="TimeRemainingController.cs" t="Include" />
+            <e p="TimeRemainingExtensions.cs" t="Include" />
+          </e>
           <e p="UniversalFactory" t="Include">
             <e p="Factory.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
@@ -59,10 +83,38 @@
             <e p="UserInputHandling.cs" t="Include" />
           </e>
           <e p="View" t="Include">
+            <e p="CoinCounterView.cs" t="Include" />
             <e p="EndGameView.cs" t="Include" />
+            <e p="GameMenu.cs" t="Include" />
+            <e p="MenuView.cs" t="Include" />
+            <e p="StarEffectView.cs" t="Include" />
+          </e>
+          <e p="ViewCommand" t="Include">
+            <e p="EndGameViewCommand.cs" t="Include" />
+            <e p="MainUICommandBase.cs" t="Include" />
+            <e p="MenuViewCommand.cs" t="Include" />
+            <e p="PanelCommand.cs" t="Include" />
+            <e p="StateUI.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTween.Modules.asmdef" t="Include" />
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>
+      <e p="DOTween.Modules.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="RampJump.csproj" t="IncludeRecursive" />

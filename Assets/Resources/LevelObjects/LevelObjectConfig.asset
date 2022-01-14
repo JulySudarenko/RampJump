@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
+  m_Name: LevelObjectConfig
+  m_EditorClassIdentifier: 
+  LevelDetailsPrefabs: []
+  CoinsPlaces:
+  - {fileID: 2561835168777433298, guid: befbb8cedb5143946b92fc11c05f6256, type: 3}
+  BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
+    type: 3}
+  CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
+    type: 3}
+  BallStartPlace: {fileID: 1554073518291111624, guid: 020da7d4dbc866e4f87b06bbdfa0ec4d,
+    type: 3}
+  BallStartPosition: {fileID: 3182337993162572979, guid: 088fb825b03d9f54abe366e315fb6284,
+    type: 3}
+  HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
+    type: 3}
+  _levelNumber: 4

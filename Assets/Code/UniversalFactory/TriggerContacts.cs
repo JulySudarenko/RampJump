@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Code.UniversalFactory
 {
-    public class TriggerContacts : MonoBehaviour
+    public sealed class TriggerContacts : MonoBehaviour
     {
-        public event Action<int> IsStayContact;
+        public event Action<int, int> IsContact;
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            IsStayContact?.Invoke(other.gameObject.GetInstanceID());
+            IsContact?.Invoke(other.gameObject.GetInstanceID(), gameObject.GetInstanceID());
         }
     }
 }

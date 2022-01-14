@@ -7,7 +7,9 @@ namespace Code.Configs
     internal class LevelObjectConfig : ScriptableObject
     {
         public List<Transform> LevelDetailsPrefabs;
+        public List<Transform> CoinsPlaces;
         public Transform BottomPrefab;
+        public Transform CoinPrefab;
         public Transform BallStartPlace;
         public Transform BallStartPosition;
         public Transform HoleStartPosition;

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
+  m_Name: SecondLevelConfig
+  m_EditorClassIdentifier: 
+  LevelDetailsPrefabs:
+  - {fileID: 5861696005220916260, guid: 73704f5cd27f8504a8a14c7a5505aa26, type: 3}
+  - {fileID: 9210720411267899274, guid: c76015fc494a2534681ec985a3a119c1, type: 3}
+  - {fileID: 7598062404183423863, guid: 4086b5549a77bd541879251992bd983f, type: 3}
+  CoinsPlaces:
+  - {fileID: 2962209786717394551, guid: d32871dd75074f748a98fd7905878323, type: 3}
+  - {fileID: 2293252780523175605, guid: 43a166c0118d9324cbfe3f19c893480f, type: 3}
+  - {fileID: 6168908887782537013, guid: ce6cad48966f32e468f2e3de337fa0c2, type: 3}
+  - {fileID: 7454487588762245984, guid: 8954a4c67c238c6488adb6e0c11df0d3, type: 3}
+  - {fileID: 6493654921220274263, guid: ea015c72e8740c14d98b5f68c3383d48, type: 3}
+  - {fileID: 1977466142679694580, guid: 5ab3400a5e521b94f9fc344b7a1be9e7, type: 3}
+  - {fileID: 4121996803021074776, guid: 9c354e56974aa0d4088f18978560ef3f, type: 3}
+  - {fileID: 8904913384367160300, guid: 161d7231d5ede5a488e4418925f732db, type: 3}
+  - {fileID: 6534238082287686887, guid: 1b061c3819afe1e45b2cdd32f8fbe7a1, type: 3}
+  - {fileID: 7932666288612628117, guid: ce3a3774cc053864e8b113343e570120, type: 3}
+  BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
+    type: 3}
+  CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
+    type: 3}
+  BallStartPlace: {fileID: 3518646691492225902, guid: 9947563535b3adb49b344cd45853def5,
+    type: 3}
+  BallStartPosition: {fileID: 8181006639749972132, guid: 9c870d980c0bd56499ebde2e39a36afd,
+    type: 3}
+  HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
+    type: 3}
+  _levelNumber: 3

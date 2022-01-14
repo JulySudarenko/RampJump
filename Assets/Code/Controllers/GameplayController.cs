@@ -1,90 +1,91 @@
 ﻿using System;
 using Code.Interfaces;
-using Code.Models;
 using Code.UniversalFactory;
 using Code.Assistant;
+using Code.Audio;
+using Code.GameState;
 using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal class GameplayController : IInitialize, IExecute, ICleanup, IFinishEvents
+    internal class GameplayController : IInitialize, IExecute, ICleanup, IState
     {
-        public event Action OnVictory;
-        public event Action OnDefeat;
-        private readonly IBallEvents _ballEvents;
-        private readonly IBallModel _ballModel;
+        public event Action<State> OnChangeState;
+
+        private const float MAX_STOP_DURATION = 50.0f;
+        private const float DISTANCE_TRASH = 0.005f;
+        private readonly Transform _ball;
         private readonly Transform _hole;
+        private readonly ISoundPlayer _audioPlayer;
+        private readonly int _ballID;
         private TriggerContacts _contacts;
+        private State _state;
         private Vector3 _previousPosition;
         private float _counter = 0.0f;
-        private float _distanceTrash = 0.005f;
-        private readonly float _maxStopDuration = 50.0f;
-        private bool _isBallKicked = false;
 
-        public GameplayController(IBallEvents ballEvents, Transform hole, IBallModel ballModel)
+
+        public GameplayController(Transform hole, Transform ballModel, int ballID, AudioSource source, AudioClip clip)
         {
-            _ballModel = ballModel;
+            _ball = ballModel;
             _hole = hole;
-            _ballEvents = ballEvents;
+            _ballID = ballID;
+            _audioPlayer = new AudioPlayer(source, clip);
         }
 
         public void Initialize()
         {
-            _previousPosition = _ballModel.Ball.position;
-            var colliderChild = _hole.GetComponentInChildren<CapsuleCollider>();
-            _contacts = HelperExtentions.GetOrAddComponent<TriggerContacts>(colliderChild.gameObject);
-            _contacts.IsStayContact += CheckHoleContact;
-            _ballEvents.OnBallKicked += OnBallKickedChange;
+            _previousPosition = _ball.position;
+            _contacts = HelperExtentions.GetOrAddComponent<TriggerContacts>(_hole.gameObject);
+            _contacts.IsContact += CheckHoleContact;
         }
 
-        private void OnBallKickedChange(bool value) => _isBallKicked = value;
+        public void ChangeState(State state) => _state = state;
+
 
         public void Execute(float deltaTime)
         {
-            if (_isBallKicked)
+            if (_state == State.BallKicked)
             {
                 CheckBallSpeed();
-                CheckStopPeriod();
             }
         }
 
-        private void CheckHoleContact(int hitID)
+        private void CheckHoleContact(int hitID, int objID)
         {
-            if (hitID == _ballModel.BallID)
+            if (hitID == _ballID)
             {
-                OnVictory?.Invoke();
-                _isBallKicked = false;
+                _audioPlayer.PlaySound();
+                OnChangeState?.Invoke(State.Victory);
             }
         }
 
         private void CheckBallSpeed()
         {
-            if (Mathf.Abs(_ballModel.Ball.position.x - _previousPosition.x) < _distanceTrash
-                && Mathf.Abs(_ballModel.Ball.position.y - _previousPosition.y) < _distanceTrash)
+            if (Mathf.Abs(_ball.position.x - _previousPosition.x) < DISTANCE_TRASH
+                && Mathf.Abs(_ball.position.y - _previousPosition.y) < DISTANCE_TRASH)
             {
                 _counter++;
-                _previousPosition = _ballModel.Ball.position;
+                _previousPosition = _ball.position;
+                CheckStopPeriod();
             }
             else
             {
                 _counter = 0.0f;
-                _previousPosition = _ballModel.Ball.position;
+                _previousPosition = _ball.position;
             }
         }
 
         private void CheckStopPeriod()
         {
-            if (_counter >= _maxStopDuration)
+            if (_counter >= MAX_STOP_DURATION)
             {
-                OnDefeat?.Invoke();
-                _isBallKicked = false;
+                OnChangeState?.Invoke(State.Defeat);
             }
         }
 
         public void Cleanup()
         {
-            _contacts.IsStayContact -= CheckHoleContact;
-            _ballEvents.OnBallKicked -= OnBallKickedChange;
+            _contacts.IsContact -= CheckHoleContact;
         }
     }
 }

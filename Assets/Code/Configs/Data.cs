@@ -1,5 +1,4 @@
 ﻿using Code.Assistant;
-using Code.Models;
 using UnityEngine;
 
 namespace Code.Configs
