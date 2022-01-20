@@ -9,6 +9,7 @@ namespace Code.View
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private Button _restartLevelButton;
 
+        public GameObject EndGamePanel => _gamePanel;
         public Button NextLevelButton => _nextLevelButton;
         public Button RestartLevelButton => _restartLevelButton;
 

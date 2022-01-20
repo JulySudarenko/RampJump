@@ -24,8 +24,7 @@ namespace Code.Controllers
         private TriggerContacts[] _coinsHits;
         private int _coinsOnLevelMax;
         private int _counter;
-
-
+        
         public CoinsController(LevelComponentsList coins, AudioSource audioSource, AudioClip clip, float rotationAngle,
             float rotationSpeed, CoinCounterView coinCounterView, StarEffectView starEffectView)
         {
@@ -51,6 +50,7 @@ namespace Code.Controllers
             {
                 _coinsHits[i].IsContact += TakeCoin;
             }
+
             TwistCoins();
             CountCoins();
         }
@@ -93,11 +93,11 @@ namespace Code.Controllers
                     break;
                 case State.Victory:
                     int rate = GetResult();
-                    _starEffectView.ShowEndStarEffect(rate);
+                    ShowEndStarEffect(rate);
                     break;
                 case State.Defeat:
                     int rateD = GetResult();
-                    _starEffectView.ShowEndStarEffect(rateD);
+                    ShowEndStarEffect(rateD);
                     break;
                 case State.Loading:
                     break;
@@ -130,6 +130,25 @@ namespace Code.Controllers
             return 0;
         }
         
+        private void ShowEndStarEffect(int winStarsQuantity)
+        {
+            switch (winStarsQuantity)
+            {
+                case 1:
+                    _starEffectView.ShowStars(true, false, false);
+                    break;
+                case 2:
+                    _starEffectView.ShowStars(true, true, false);
+                    break;
+                case 3:
+                    _starEffectView.ShowStars(true, true, true);
+                    break;
+                default:
+                    _starEffectView.ShowStars(false, false, false);
+                    break;
+            }
+        }
+
         public void Cleanup()
         {
             for (int i = 0; i < _coinsHits.Length; i++)

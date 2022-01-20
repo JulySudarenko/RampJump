@@ -16,6 +16,7 @@ namespace Code.Controllers
         [SerializeField] private CoinCounterView _coinCounterView;
         [SerializeField] private StarEffectView _starEffectView;
         [SerializeField] private MenuView _menuView;
+        [SerializeField] private GameObject _loadingPanelView;
         private Controllers _controllers;
 
         private void Start()
@@ -25,7 +26,7 @@ namespace Code.Controllers
             var cameraAudioSource = camera.gameObject.GetOrAddComponent<AudioSource>();
 
             var menu = new GameMenu(_menuView);
-            var viewController = new ViewController(_endGameView, _menuView);
+            var viewController = new ViewController(_endGameView, _menuView, _loadingPanelView);
 
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);

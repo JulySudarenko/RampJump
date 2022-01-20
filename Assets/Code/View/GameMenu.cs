@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Controllers
 {
-    internal class GameMenu : IInitialize, ICleanup
+    public class GameMenu : IInitialize, ICleanup
     {
         private readonly MenuView _menuView;
 

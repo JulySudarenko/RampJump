@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Code.Ball;
+using Code.Controllers;
+using Code.View;
 using UnityEngine;
 
 namespace Code.Configs
@@ -37,4 +39,5 @@ namespace Code.Configs
         public float CoinsRotationAngle => _coinsRotationAngle;
         public float CoinsRotationSpeed => _coinsRotationSpeed;
     }
+
 }

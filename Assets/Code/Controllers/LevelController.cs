@@ -44,7 +44,6 @@ namespace Code.Controllers
             switch (state)
             {
                 case State.Start:
-
                     break;
                 case State.BallTouched:
                     break;
@@ -53,9 +52,11 @@ namespace Code.Controllers
                     break;
                 case State.Victory:
                     PlayVictoryVariant();
+
                     break;
                 case State.Defeat:
-                    RestartLevel();
+
+                    //RestartLevel();
                     break;
                 case State.Loading:
                     UpdateStartPositions();
@@ -74,13 +75,13 @@ namespace Code.Controllers
             }
 
             _configParser.InitNewLevel(_levelCounter);
-            OnChangeState?.Invoke(State.Loading);
+            //OnChangeState?.Invoke(State.Loading);
         }
 
-        private void RestartLevel()
-        {
-            OnChangeState?.Invoke(State.Loading);
-        }
+        // private void RestartLevel()
+        // {
+        //     OnChangeState?.Invoke(State.Loading);
+        // }
 
         private void UpdateStartPositions()
         {
@@ -92,7 +93,7 @@ namespace Code.Controllers
             _hole.position = _configParser.HoleStartPosition;
             _configParser.ReloadCoins(_levelCounter);
 
-            OnChangeState?.Invoke(State.Start);
+            //OnChangeState?.Invoke(State.Start);
         }
 
         public void Cleanup()

@@ -29,8 +29,8 @@ MonoBehaviour:
   CoinSound: {fileID: 8300000, guid: dbc3ffa7bb1653c49ac49f878132d71b, type: 3}
   KickSound: {fileID: 8300000, guid: 4df417a1efeb37f4aa6ae5a2d617f312, type: 3}
   DirectHitSound: {fileID: 8300000, guid: 5239806fd409a5c4da95d652c2128b3c, type: 3}
-  _force: 500
-  _forceRiseFactor: 300
-  _colorRiseFactor: 10
+  _force: 600
+  _forceRiseFactor: 400
+  _colorRiseFactor: 5
   _coinsRotationAngle: 70
   _coinsRotationSpeed: 4

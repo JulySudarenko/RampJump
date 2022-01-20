@@ -10,15 +10,15 @@ namespace Code.ViewCommand
         {
             _endGamePanel = panel;
         }
-        
+
         public override void Activate()
         {
-            _endGamePanel.gameObject.SetActive(true);
+            _endGamePanel.EndGamePanel.gameObject.SetActive(true);
         }
 
         public override void Cancel()
         {
-            _endGamePanel.gameObject.SetActive(false);
+            _endGamePanel.EndGamePanel.gameObject.SetActive(false);
         }
     }
 }

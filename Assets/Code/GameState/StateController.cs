@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Code.Controllers;
 using Code.Interfaces;
 
@@ -6,12 +6,15 @@ namespace Code.GameState
 {
     internal class StateController : IInitialize, ICleanup
     {
+        private readonly List<IState> _stateList;
+
         private readonly IState _ballController;
         private readonly IState _arrowController;
         private readonly IState _gameplayController;
         private readonly IState _levelController;
         private readonly IState _coinsController;
         private readonly IState _viewController;
+        
         private State _state;
 
         public StateController(BallTouchController ballEvents, ArrowController arrowController,
@@ -24,53 +27,28 @@ namespace Code.GameState
             _levelController = levelController;
             _coinsController = coins;
             _viewController = viewController;
+
+            _stateList = new List<IState>();
+            AddToStateList();
+            _state = State.Start;
+        }
+
+        private void AddToStateList()
+        {
+            _stateList.Add(_viewController);
+            _stateList.Add(_levelController);
+            _stateList.Add(_ballController);
+            _stateList.Add(_coinsController);
+            _stateList.Add(_gameplayController);
+            _stateList.Add(_arrowController);
         }
 
         private void ChangeState(State state)
         {
             _state = state;
-            switch (_state)
+            for (int i = 0; i < _stateList.Count; i++)
             {
-                case State.Start:
-                    _viewController.ChangeState(_state);
-                    _levelController.ChangeState(_state);
-                    _ballController.ChangeState(_state);
-                    _coinsController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    break;
-                case State.BallTouched:
-                    _arrowController.ChangeState(_state);
-                    _ballController.ChangeState(_state);
-                    _coinsController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    break;
-                case State.BallKicked:
-                    _arrowController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    _levelController.ChangeState(_state);
-                    _ballController.ChangeState(_state);
-                    break;
-                case State.Victory:
-                    _viewController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    _coinsController.ChangeState(_state);
-
-                    _levelController.ChangeState(_state);
-                    break;
-                case State.Defeat:
-                    _viewController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    _coinsController.ChangeState(_state);
-                    _levelController.ChangeState(_state);
-                    break;
-                case State.Loading:
-                    _viewController.ChangeState(_state);
-                    _gameplayController.ChangeState(_state);
-                    _coinsController.ChangeState(_state);
-                    _levelController.ChangeState(_state);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                _stateList[i].ChangeState(_state);
             }
         }
 

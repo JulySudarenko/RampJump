@@ -10,17 +10,15 @@ namespace Code.ViewCommand
         {
             _menuPanel = panel;
         }
-        
+
         public override void Activate()
         {
-            _menuPanel.MenuPanel.SetActive(true);
-            _menuPanel.gameObject.SetActive(true);
+            _menuPanel.MenuPanel.gameObject.SetActive(true);
         }
 
         public override void Cancel()
         {
-            _menuPanel.MenuPanel.SetActive(false);
-            _menuPanel.gameObject.SetActive(false);
+            _menuPanel.MenuPanel.gameObject.SetActive(false);
         }
     }
 }
