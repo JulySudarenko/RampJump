@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2636dfc4fe404294a99092ace009ec, type: 3}
+  m_Name: FirstLevelConfig
+  m_EditorClassIdentifier: 
+  LevelDetailsPrefabs:
+  - {fileID: 8579172663122340110, guid: 621284d54deb370488b4e3f2db77890a, type: 3}
+  - {fileID: 8303253856753844083, guid: 1d0769cd06b014e4f96820821b0fd5a0, type: 3}
+  - {fileID: 4988692516564079630, guid: aa26248616c86ef4ea213b270493a180, type: 3}
+  - {fileID: 2091937080293204265, guid: be58a24acfc2f3f46a26a4655a4046ea, type: 3}
+  CoinsPlaces:
+  - {fileID: 2561835168777433298, guid: befbb8cedb5143946b92fc11c05f6256, type: 3}
+  - {fileID: 2173128313600623136, guid: 152d82eb4325cb844bf9e28c11deab4e, type: 3}
+  - {fileID: 6391699195644083582, guid: d571cc9c49db1af4aab12d92ed2c07a4, type: 3}
+  - {fileID: 6142228689803773652, guid: de78034b2168aec43be395b995d3a575, type: 3}
+  - {fileID: 6297421659196641628, guid: 2f9005fdc6b04b945acae8b9a81845dc, type: 3}
+  - {fileID: 2465582686408318096, guid: 1de1e7203a9e34640ad69d6aee3d8340, type: 3}
+  - {fileID: 5702113570324050490, guid: fb750711a91d7de4da385d20fc3d4d82, type: 3}
+  - {fileID: 5933480792032786371, guid: b50c48c76678f61469c08a80b16d51d8, type: 3}
+  - {fileID: 5143805046641046835, guid: b4e9c200fd0dc984c816ddd2478ce089, type: 3}
+  - {fileID: 5208608604992853454, guid: 01d3e407949714441bedfa00c55a0ddb, type: 3}
+  BottomPrefab: {fileID: 3519546303270841654, guid: b5ded73f8b8fbba44b175c60c37750cc,
+    type: 3}
+  CoinPrefab: {fileID: 2231986355278446784, guid: b2823fea81c699f47af112b6bd8f4a98,
+    type: 3}
+  BallStartPlace: {fileID: 1554073518291111624, guid: 020da7d4dbc866e4f87b06bbdfa0ec4d,
+    type: 3}
+  BallStartPosition: {fileID: 3182337993162572979, guid: 088fb825b03d9f54abe366e315fb6284,
+    type: 3}
+  HoleStartPosition: {fileID: 5201892771927570090, guid: 98fffde889071f9419df39a10f341926,
+    type: 3}
+  _levelNumber: 1

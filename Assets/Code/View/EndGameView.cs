@@ -3,30 +3,33 @@ using UnityEngine.UI;
 
 namespace Code.View
 {
-    internal sealed class EndGameView : MonoBehaviour
+    public sealed class EndGameView : MonoBehaviour
     {
         [SerializeField] private GameObject _gamePanel;
-        public Button NextLevelButton;
-        public Button RestartLevelButton;
+        [SerializeField] private Button _nextLevelButton;
+        [SerializeField] private Button _restartLevelButton;
 
+        public GameObject EndGamePanel => _gamePanel;
+        public Button NextLevelButton => _nextLevelButton;
+        public Button RestartLevelButton => _restartLevelButton;
 
         public void Restart()
         {
             _gamePanel.SetActive(false);
-            NextLevelButton.gameObject.SetActive(false);
-            RestartLevelButton.gameObject.SetActive(false);
+            _nextLevelButton.gameObject.SetActive(false);
+            _restartLevelButton.gameObject.SetActive(false);
         }
 
         public void ShowWinPanel()
         {
             _gamePanel.SetActive(true);
-            NextLevelButton.gameObject.SetActive(true);
+            _nextLevelButton.gameObject.SetActive(true);
         }
 
         public void ShowLosePanel()
         {
             _gamePanel.SetActive(true);
-            RestartLevelButton.gameObject.SetActive(true);
+            _restartLevelButton.gameObject.SetActive(true);
         }
     }
 }
