@@ -1,11 +1,13 @@
 ﻿using Code.Interfaces;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Code.Controllers
 {
     public class GameMenu : IInitialize, ICleanup
     {
         private readonly MenuView _menuView;
+        private readonly Button _exit;
 
         public GameMenu(MenuView menuView)
         {
@@ -17,7 +19,7 @@ namespace Code.Controllers
             _menuView.Exit.onClick.AddListener(Exit);
         }
 
-        private void Exit()
+        public void Exit()
         {
             Application.Quit();
         }

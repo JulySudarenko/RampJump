@@ -23,10 +23,12 @@ namespace Code.Controllers
         {
             var configParser = new ActiveObjectsConfigParser(_data.ActiveObjectConfig);
             Camera camera = Camera.main;
+
             var cameraAudioSource = camera.gameObject.GetOrAddComponent<AudioSource>();
 
             var menu = new GameMenu(_menuView);
-            var viewController = new ViewController(_endGameView, _menuView, _loadingPanelView);
+            var viewController =
+                new ViewController(_data.ViewConfig, _data.Canvas, _endGameView, _menuView, _loadingPanelView);
 
             IUserInput input = new UserInputHandling();
             var inputController = new InputController(input);
@@ -43,8 +45,6 @@ namespace Code.Controllers
             var coins = new CoinsController(levelController.CoinsList, configParser.Ball.BallAudioSource,
                 configParser.CoinSound, _data.ActiveObjectConfig.CoinsRotationAngle,
                 _data.ActiveObjectConfig.CoinsRotationSpeed, _coinCounterView, _starEffectView);
-            var slimeCheckout = new SlimeCheckout(levelController.ComponentsList, cameraAudioSource,
-                configParser.BallSlimeSound, configParser.Ball.BallHit);
 
             var gameStateController = new StateController(ballTouchHandlingController, arrowController,
                 gameplayController, levelController, coins, viewController);
@@ -60,7 +60,6 @@ namespace Code.Controllers
             _controllers.Add(gameplayController);
             _controllers.Add(levelController);
             _controllers.Add(coins);
-            _controllers.Add(slimeCheckout);
             _controllers.Add(gameStateController);
             _controllers.Initialize();
         }

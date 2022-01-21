@@ -26,6 +26,7 @@
             <e p="ActiveObjectConfig.cs" t="Include" />
             <e p="Data.cs" t="Include" />
             <e p="LevelObjectConfig.cs" t="Include" />
+            <e p="ViewConfig.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
             <e p="ArrowController.cs" t="Include" />
@@ -33,11 +34,11 @@
             <e p="BallTouchController.cs" t="Include" />
             <e p="CoinsController.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
+            <e p="GameMenu.cs" t="Include" />
             <e p="GameplayController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
             <e p="RootController.cs" t="Include" />
-            <e p="SlimeCheckout.cs" t="Include" />
             <e p="ViewController.cs" t="Include" />
           </e>
           <e p="GameState" t="Include">
@@ -85,10 +86,10 @@
           <e p="View" t="Include">
             <e p="CoinCounterView.cs" t="Include" />
             <e p="EndGameView.cs" t="Include" />
-            <e p="GameMenu.cs" t="Include" />
             <e p="LoadingPanelView.cs" t="Include" />
             <e p="MenuView.cs" t="Include" />
             <e p="StarEffectView.cs" t="Include" />
+            <e p="ViewInstaller.cs" t="Include" />
           </e>
           <e p="ViewCommand" t="Include">
             <e p="EndGameViewCommand.cs" t="Include" />

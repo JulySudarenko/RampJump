@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Configs;
 using Code.GameState;
 using Code.Interfaces;
 using Code.Timer;
@@ -10,18 +11,21 @@ namespace Code.Controllers
 {
     public class ViewController : IInitialize, ICleanup, IState
     {
-        private const float LOADING_TIME = 2.0f;
+        private const float LOADING_TIME = 1.0f;
         public event Action<State> OnChangeState;
 
         private ITimeRemaining _timeRemaining;
         private readonly PanelCommand _panelCommand;
         private readonly EndGameView _endGameView;
         private readonly MenuView _menuView;
+        private readonly GameMenu _gameMenu;
 
-        public ViewController(EndGameView endGameView, MenuView menuView, GameObject loadingPanelView)
+        public ViewController(ViewConfig viewConfig, Canvas canvas, EndGameView endGameView, MenuView menuView, GameObject loadingPanelView)
         {
+            ViewInstaller viewInstaller = new ViewInstaller(viewConfig, canvas);
             _endGameView = endGameView;
             _menuView = menuView;
+            _gameMenu = new GameMenu(_menuView);
             _panelCommand = new PanelCommand(_endGameView, _menuView, loadingPanelView);
             _panelCommand.MakeStartUIPanel();
         }
@@ -34,6 +38,7 @@ namespace Code.Controllers
             _endGameView.RestartLevelButton.onClick.AddListener(_endGameView.Restart);
             _endGameView.RestartLevelButton.onClick.AddListener(RestartLevel);
             _menuView.Restart.onClick.AddListener(RestartLevel);
+            _menuView.Exit.onClick.AddListener(_gameMenu.Exit);
         }
 
         public void ChangeState(State state)
@@ -82,6 +87,7 @@ namespace Code.Controllers
             _endGameView.NextLevelButton.onClick.RemoveAllListeners();
             _endGameView.RestartLevelButton.onClick.RemoveAllListeners();
             _menuView.Restart.onClick.RemoveAllListeners();
+            _menuView.Exit.onClick.RemoveAllListeners();
         }
     }
 }

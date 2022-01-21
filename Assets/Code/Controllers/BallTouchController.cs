@@ -1,5 +1,4 @@
 ﻿using System;
-using Code.Audio;
 using Code.Ball;
 using Code.GameState;
 using Code.Interfaces;
@@ -19,7 +18,6 @@ namespace Code.Controllers
         private readonly IForceModel _forceModel;
         private readonly IUserInput _userInput;
         private readonly Camera _camera;
-        private readonly ISoundPlayer _audioPlayer;
         private State _state;
         private Ray _ray;
         private RaycastHit _hit;
@@ -39,7 +37,6 @@ namespace Code.Controllers
             _camera = camera;
             _userInput = userInput;
             _forceModel = forceModel;
-            _audioPlayer = new AudioPlayer(source, clip);
         }
 
         public void Initialize()
@@ -97,13 +94,13 @@ namespace Code.Controllers
         private void IncreaseTheSpeed(float deltaTime)
         {
             _force += deltaTime * _forceModel.ForceRiseFactor;
+
             if (_force >= MAX_FORCE)
                 _force = MAX_FORCE;
         }
 
         private void KickTheBall()
         {
-            _audioPlayer.PlaySound();
             _touchDirection =
                 new Vector3(_mousePosition.x, _mousePosition.y, _ball.BallTransform.position.z);
             _ball.BallRigidbody.AddForce((_touchDirection - _touchStartPosition).normalized * _force);

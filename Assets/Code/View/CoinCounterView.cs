@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.View
 {
-    internal class CoinCounterView : MonoBehaviour
+    public class CoinCounterView : MonoBehaviour
     {
         [SerializeField] private TMP_Text _coinCount;
         [SerializeField] private GameObject _panel;

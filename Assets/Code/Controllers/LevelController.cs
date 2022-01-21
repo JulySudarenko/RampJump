@@ -44,6 +44,7 @@ namespace Code.Controllers
             switch (state)
             {
                 case State.Start:
+                    _ball.BallRigidbody.constraints = RigidbodyConstraints.None;
                     break;
                 case State.BallTouched:
                     break;
@@ -52,11 +53,10 @@ namespace Code.Controllers
                     break;
                 case State.Victory:
                     PlayVictoryVariant();
-
+                    _ball.BallRigidbody.constraints = RigidbodyConstraints.FreezePosition;
                     break;
                 case State.Defeat:
-
-                    //RestartLevel();
+                    _ball.BallRigidbody.constraints = RigidbodyConstraints.FreezePosition;
                     break;
                 case State.Loading:
                     UpdateStartPositions();
@@ -75,13 +75,7 @@ namespace Code.Controllers
             }
 
             _configParser.InitNewLevel(_levelCounter);
-            //OnChangeState?.Invoke(State.Loading);
         }
-
-        // private void RestartLevel()
-        // {
-        //     OnChangeState?.Invoke(State.Loading);
-        // }
 
         private void UpdateStartPositions()
         {
@@ -92,8 +86,6 @@ namespace Code.Controllers
             _arrow.position = _configParser.BallStartPosition;
             _hole.position = _configParser.HoleStartPosition;
             _configParser.ReloadCoins(_levelCounter);
-
-            //OnChangeState?.Invoke(State.Start);
         }
 
         public void Cleanup()

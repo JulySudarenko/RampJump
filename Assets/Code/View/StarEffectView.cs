@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Code.View
 {
-    internal class StarEffectView : MonoBehaviour
+    public class StarEffectView : MonoBehaviour
     {
         [SerializeField] private Image _largeFillStar;
         [SerializeField] private Image _leftFillStar;
