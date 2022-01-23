@@ -22,7 +22,7 @@ namespace Code.Controllers
 
         public ViewController(ViewConfig viewConfig, Canvas canvas, EndGameView endGameView, MenuView menuView, GameObject loadingPanelView)
         {
-            ViewInstaller viewInstaller = new ViewInstaller(viewConfig, canvas);
+            //ViewInstaller viewInstaller = new ViewInstaller(viewConfig, canvas);
             _endGameView = endGameView;
             _menuView = menuView;
             _gameMenu = new GameMenu(_menuView);
