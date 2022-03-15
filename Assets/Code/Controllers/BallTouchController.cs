@@ -31,7 +31,7 @@ namespace Code.Controllers
         private bool _isMouseButton;
 
         public BallTouchController(IBall ball, IForceModel forceModel, Camera camera,
-            IUserInput userInput, [CanBeNull] AudioSource source, AudioClip clip)
+            IUserInput userInput)
         {
             _ball = ball;
             _camera = camera;

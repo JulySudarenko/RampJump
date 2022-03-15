@@ -34,7 +34,7 @@ namespace Code.Controllers
             var inputController = new InputController(input);
 
             var ballTouchHandlingController = new BallTouchController(configParser.Ball,
-                _data.ActiveObjectConfig, camera, input, cameraAudioSource, _data.ActiveObjectConfig.KickSound);
+                _data.ActiveObjectConfig, camera, input);
             var arrowController = new ArrowController(configParser.ArrowObject, input, configParser.Ball.BallTransform,
                 _data.ActiveObjectConfig, _data.ActiveObjectConfig.ArrowColors);
             var gameplayController = new GameplayController(configParser.HoleObject, configParser.Ball.BallTransform,

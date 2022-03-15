@@ -7,7 +7,7 @@ namespace Code.Controllers
 {
     internal class BallLandingController
     {
-        private const int STOP_FACTOR = 100;
+        private const int STOP_FACTOR = 10;
         private readonly IBall _ball;
         private readonly Hit _hit;
 

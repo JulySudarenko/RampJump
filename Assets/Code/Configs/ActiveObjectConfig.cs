@@ -16,9 +16,7 @@ namespace Code.Configs
         [SerializeField] private List<Material> _arrowColors;
         
         [Header("Sounds")] 
-        public AudioClip SlimeSound;
         public AudioClip CoinSound;
-        public AudioClip KickSound;
         public AudioClip DirectHitSound;
         
         [Header("Speed settings")]

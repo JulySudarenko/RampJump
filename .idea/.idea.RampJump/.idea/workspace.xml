@@ -20,18 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="316a0b96-01d5-4d50-b4ac-30d7036bf89f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RampJump/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ViewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelCreator/LevelsConfigEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/LevelsConfigEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelCreator/LevelsConfigEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ball/BallMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ball/BallMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BigRamp/BigRampMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BigRamp/BigRampMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Flag/FlagMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Flag/FlagMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tree_1/Tree1Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tree_1/Tree1Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tree_2/Tree2Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tree_2/Tree2Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tree_3/Tree3Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tree_3/Tree3Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ActiveObjects/DetailsBaseConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ActiveObjects/DetailsBaseConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/1-zvuk-podbrasyvaniya-monety-dzyn.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/1-zvuk-podbrasyvaniya-monety-dzyn.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/b0a15ee2e1ad0c9.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/b0a15ee2e1ad0c9.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/click1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/click1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/DirectHitSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/DirectHitSound.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/KickSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/KickSound.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/SlimeSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/SlimeSound.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/pustoy-udar-klyushkoy.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/pustoy-udar-klyushkoy.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/udar-po-myachu-dlya-golfa.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/udar-po-myachu-dlya-golfa.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/udar-s-razmahom-v-golfe.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/udar-s-razmahom-v-golfe.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/zvuk-udara-bez-myacha-1-1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/zvuk-udara-bez-myacha-1-1.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/zvuk-udara-po-myachu.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/new/zvuk-udara-po-myachu.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BigRamp3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BigRamp3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LevelObjects/FirstLevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LevelObjects/FirstLevelConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/LevelObjects/LevelObjectConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LevelObjects/LevelObjectConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
     </list>
@@ -68,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/View/StarCounterView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/StopGame.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/GameMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" />
@@ -99,19 +119,15 @@
         <option value="$PROJECT_DIR$/Assets/Code/ViewCommand/EndGameViewCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ViewCommand/MenuViewCommand.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ViewCommand/PanelCommand.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Configs/Data.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/EndGameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameplayController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/LevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Configs/ViewConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/View/ViewInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/ArrowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Arrow/ArrowColor.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Shader/UnlitShader.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Shader/DistortionContorl.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Shader/DistortionContor.cs" />
@@ -119,6 +135,11 @@
         <option value="$PROJECT_DIR$/Assets/Code/Shader/TerrainUnlit.shader" />
         <option value="$PROJECT_DIR$/Assets/Code/Shader/ToonShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Code/Controllers/ViewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Configs/ActiveObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallTouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/RootController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/LevelConstructor/ActiveObjectsConfigParser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Controllers/BallLandingController.cs" />
       </list>
     </option>
   </component>
